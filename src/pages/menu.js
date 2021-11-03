@@ -1,40 +1,10 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import MenuItem from "../components/menu/menuItems"
+import MenuDrinks from "../components/menu/menuDrinks"
+import MenuFood from "../components/menu/menuFood"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import "../components/menu/menu.css"
 import logo from "../images/logo.svg"
-
-
-// const drinks = [
-//   {
-//     type: "Pressed Juices", 
-//                   name: "Sunrise",
-//                   price: "$6.5",
-//                   ingrediants: [
-//                           "carrot, ",
-//                           "apple, ",
-//                           "ginger, ",
-//                           "lemon, ",
-//                           "turmeric, ",
-//                           "black pepper",
-//                       ],
-//                     },
-//                     {
-//                       type: "Pressed Juices", 
-//                                     name: "Beet",
-//                                     price: "$6.5",
-//                                     ingrediants: [
-//                                             "carrot, ",
-//                                             "apple, ",
-//                                             "ginger, ",
-//                                             "lemon, ",
-//                                             "turmeric, ",
-//                                             "black pepper",
-//                                         ],
-//                                       }
-//                   ]
 
 // const items = [
 //   drinks
@@ -2015,64 +1985,28 @@ import logo from "../images/logo.svg"
 //   ],
 // ]
 
-
-const Menu = (props) => (
+const Menu = props => (
   <Layout>
     <Seo title="Menu" />
-    <div className="ht w-full ht overflow-scroll ">
-          
-<MenuItem />
-  
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    <h1>Hi from the second page</h1>
-    
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <div className="relative ht">
+      <div className="ht absolute z-10 w-full ht overflow-scroll ">
+        
+          <div className="flex w-full justify-evenly">
+            <MenuDrinks />
+            <MenuFood />
+          </div>
+      </div>
+      <div
+        className="ht w-full flex absolute "
+        style={{
+          backgroundImage: `url(${logo})`,
+          backgroundRepeat: `no-repeat`,
+          backgroundPosition: `center`,
+          backgroundSize: `50%`,
+          opacity: `.3`,
+        }}
+      ></div>
     </div>
-  <div className="ht w-full flex fixed mg "
-  style={{ backgroundImage: `url(${logo})`,backgroundRepeat: `no-repeat`,
-  backgroundPosition: `center`, backgroundSize: `50%`, opacity: `.3` }}
-  ></div>
   </Layout>
 )
 

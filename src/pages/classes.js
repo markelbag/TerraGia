@@ -12,7 +12,6 @@ const people = [
     { instructor: 'Plant Lady Mary', class: 'Moss Wall Workshop', fee: '$65', date: 'April 26 @ 5pm' },
     { instructor: 'Plant Lady Mary', class: 'Moss Wall Workshop', fee: '$65', date: 'April 26 @ 5pm' },
     { instructor: 'Plant Lady Mary', class: 'Moss Wall Workshop', fee: '$65', date: 'April 26 @ 5pm' },
-    { instructor: 'Cody Fisher', class: 'Product Directives Officer', fee: 'Owner', date: 'cody.fisher@example.com' },
     // More people...
   ]
 
