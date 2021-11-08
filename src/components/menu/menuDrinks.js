@@ -1,10 +1,13 @@
 import * as React from "react"
 import { Drinks } from "../../../data"
+import AddToCartModal from "../addToCartModal/addToCartModal"
 
 const MenuDrinks = (props) => {
   const clickHander = () => {
     console.log('Clicked')
-  }
+    return(
+    <AddToCartModal />
+    )}
 
 return (
     <div>

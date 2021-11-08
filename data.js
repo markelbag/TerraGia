@@ -1,6 +1,7 @@
 export const Drinks = [
   {
     type: "Pressed Juices",
+    id: "1",
     name: "Sunrise",
     price: "$6.5",
     ingrediants: [
@@ -13,6 +14,7 @@ export const Drinks = [
     ],
   },
   {
+    id: "2",
     name: "Detox",
     price: "$6.5",
     ingrediants: [
@@ -26,6 +28,7 @@ export const Drinks = [
     ],
   },
   {
+    id: "3",
     name: "Kickstart",
     price: "$6.5",
     ingrediants: [
@@ -38,6 +41,7 @@ export const Drinks = [
     ],
   },
   {
+    id: "4",
     name: "Refresh",
     price: "$6.5",
     ingrediants: [
@@ -50,12 +54,14 @@ export const Drinks = [
     ],
   },
   {
+    id: "5",
     name: "Celery",
     price: "$5",
     ingrediants: ["celery"],
   },
   {
     type: "Smoothie",
+    id: "6",
     name: "Strawberry Ginger",
     price: "$7",
     ingrediants: [
@@ -67,6 +73,7 @@ export const Drinks = [
     ],
   },
   {
+    id: "7",
     name: "Acai Pomegranate",
     price: "$7",
     ingrediants: [
@@ -78,6 +85,7 @@ export const Drinks = [
     ],
   },
   {
+    id: "8",
     name: "Greens And Apples",
     price: "$7",
     ingrediants: [
@@ -90,11 +98,13 @@ export const Drinks = [
     ],
   },
   {
+    id: "9",
     name: "Aloha Pineapple",
     price: "$7",
     ingrediants: ["orange, ", "apple, ", "pineapple, ", "coconut flakes"],
   },
   {
+    id: "10",
     name: "Banana Oat",
     price: "$7",
     ingrediants: [
@@ -108,7 +118,7 @@ export const Drinks = [
   },
   {
     type: "Elixirs and Tonics",
-
+    id: "11",
     name: "Lemon Ginger Tonic",
     price: "$5",
     ingrediants: [
@@ -121,26 +131,31 @@ export const Drinks = [
     ],
   },
   {
+    id: "12",
     name: "Golden Latte",
     price: "$5",
     ingrediants: ["house blend turmeric tea, ", "choice of milk"],
   },
   {
+    id: "13",
     name: "Spiced Carob",
     price: "$4.5",
     ingrediants: ["carob, ", "spices, ", "agave, ", "choice of milk"],
   },
   {
+    id: "14",
     name: "Yerba Mate Latte",
     price: "$4.5",
     ingrediants: ["yerba mate tea, ", "choice of milk"],
   },
   {
+    id: "15",
     name: "Chlorophyll Water",
     price: "$3",
     ingrediants: ["lemon, ", "ginger, ", "chlorophyll, ", "h20"],
   },
   {
+    id: "16",
     name: "Carrot Ginger Elixir",
     price: "$5",
     ingrediants: [
@@ -152,24 +167,27 @@ export const Drinks = [
     ],
   },
   {
+    id: "17",
     name: "Spirulina Matcha",
     price: "$7",
     ingrediants: ["spirulina, ", "matcha, ", "oat milk, ", "pineapple"],
   },
   {
+    id: "18",
     name: "Yuzu Tea Tonic",
     price: "$5",
     ingrediants: ["yuzu, ", "white tea, ", "mint"],
   },
   {
+    id: "19",
     type: "Healing Teas",
     name: "Fortify",
     price: ["$4", "$5"],
     ingrediants: ["hibiscus, ", "chamomile, ", "marshmallow, ", "spearmint"],
   },
   {
+    id: "20",
     name: "Rejuvenate",
-
     price: ["$4 ", "$5"],
     ingrediants: [
       "lemongrass, ",
@@ -179,8 +197,8 @@ export const Drinks = [
     ],
   },
   {
+    id: "21",
     name: "Serenitea",
-
     price: ["$4 ", "$5"],
     ingrediants: [
       "lemon verbena, ",
@@ -194,8 +212,8 @@ export const Drinks = [
     ],
   },
   {
+    id: "22",
     name: "Revive",
-
     price: ["$4 ", "$5"],
     ingrediants: [
       "tulsi, ",
@@ -209,151 +227,183 @@ export const Drinks = [
   },
   {
     type: "Hot Chocolate",
+    id: "23",
     name: "Belgian Hot Chocolate",
     price: "$5",
     blend: ["light, ", "medium, ", "dark"],
   },
   {
     type: "Coffee Bar",
-
+    id: "24",
     name: "Drip Coffee",
     price: ["$2.25 ", "$2.75"],
   },
   {
+    id: "25",
     name: "Espresso",
     price: ["$2.50 ", "$3.25"],
   },
   {
-    id: "3",
+    id: "26",
     name: "Americano",
-
     price: ["$2.75 ", "$2.50"],
   },
   {
+    id: "27",
     name: "Cappucchino",
     price: ["$3.75 ", "$4.75"],
   },
   {
+    id: "28",
     name: "Latte",
     price: ["$4 ", "$5"],
   },
   {
+    id: "29",
     name: "Lavender Latte",
     price: ["$4.5 ", "$5.5"],
   },
   {
+    id: "30",
     name: "Cardamom Latte",
     price: ["$4.5 ", "$5.5"],
   },
   {
+    id: "31",
     name: "Mocha Latte",
     price: ["$4.5 ", "$5.5"],
   },
   {
+    id: "32",
     name: "Dirty Chai",
     price: ["$5.25 ", "$6"],
   },
   {
+    id: "33",
     name: "Flavor Shot",
     price: "$.5",
   },
   {
+    id: "34",
     name: "Caramel",
   },
   {
+    id: "35",
     name: "Hazelnut",
   },
   {
+    id: "36",
     name: "Vanilla",
   },
   {
+    id: "37",
     name: "Seasonal",
   },
   {
-    id: "11",
+    id: "38",
     name: "Any iced drink",
     price: "$.5",
   },
 
   {
     type: "Other Teas",
+    id: "39",
     name: "Matcha Latte",
-
     price: ["$4.5 ", "$5.5"],
     ingrediants: ["organic matcha ", "choice of milk"],
   },
   {
+    id: "40",
     name: "Chai Latte",
-
     price: ["$4.5 ", "$5.5"],
     ingrediants: ["housemade chai base ", "choice of milk"],
   },
   {
     type: "White Heron Loose Leaf",
-
+    id: "41",
     price: ["$2.25 ", "$2.75"],
   },
   {
+    id: "42",
     type: "Caffinated",
   },
   {
+    id: "43",
     name: "Oolong",
   },
   {
+    id: "44",
     name: "Dubliners",
   },
   {
+    id: "45",
     name: "Earl Grey",
   },
   {
+    id: "46",
     name: "Chai",
   },
   {
+    id: "47",
     name: "White Pomegranate",
   },
   {
+    id: "48",
     name: "Green",
   },
   {
+    id: "49",
     type: "Herbal",
   },
   {
+    id: "50",
     name: "Cranberry Apple Ginger",
   },
   {
+    id: "51",
     name: "Mintology",
   },
   {
+    id: "52",
     name: "Lemon Berry",
   },
   {
+    id: "53",
     name: "Chamomile Lavender",
   },
   {
+    id: "54",
     name: "Rooibos",
   },
   {
+    id: "55",
     name: "Spicy Licorice Mint",
   },
   {
+    id: "56",
     name: "Any tea iced",
     price: ["$2.75 ", "$3.25"],
   },
 
   {
+    id: "57",
     type: "Bottled Drinks",
     price: "$2.5",
   },
   {
+    id: "58",
     name: "Smart Water",
   },
   {
+    id: "59",
     name: "San Pellegrino",
   },
   {
+    id: "60",
     name: "Lemonade",
   },
   {
+    id: "61",
     name: "Cranberry Juice",
   },
 ]
@@ -361,6 +411,7 @@ export const Drinks = [
 export const Food = [
   {
     type: "Breakfast",
+    id: "62",
     name: "Breakfast Sandwich",
     price: "$8",
     choices: ["sourdough or ", "seven grain ", "bacon or ", "ham "],
@@ -373,6 +424,7 @@ export const Food = [
     ],
   },
   {
+    id: "63",
     name: "Green Eggs And Ham",
     price: "$10",
     ingrediants: [
@@ -387,6 +439,7 @@ export const Food = [
     ],
   },
   {
+    id: "64",
     name: "Burnt Onion Bowl",
     price: "$10",
     ingrediants: [
@@ -400,6 +453,7 @@ export const Food = [
     ],
   },
   {
+    id: "65",
     name: "Fall Greek Yogurt",
     price: "$8",
     ingrediants: [
@@ -411,6 +465,7 @@ export const Food = [
     ],
   },
   {
+    id: "66",
     name: "Porridge",
     price: "$10",
     ingrediants: [
@@ -424,6 +479,7 @@ export const Food = [
     ],
   },
   {
+    id: "67",
     name: "Hummus Avocado Toast",
     price: "$10",
     ingrediants: [
@@ -436,6 +492,7 @@ export const Food = [
     ],
   },
   {
+    id: "68",
     name: "Sweet Potato Avocado Toast",
     price: "$10",
     ingrediants: [
@@ -447,6 +504,7 @@ export const Food = [
     ],
   },
   {
+    id: "69",
     name: "Feta Avocado Toast",
     price: "$10",
     ingrediants: [
@@ -460,6 +518,7 @@ export const Food = [
     ],
   },
   {
+    id: "70",
     name: "Almond Butter Toast",
     price: "$10",
     ingrediants: [
@@ -471,6 +530,7 @@ export const Food = [
     ],
   },
   {
+    id: "71",
     type: "Salad",
     name: "Avocado Blue",
     price: "$11.5",
@@ -485,6 +545,7 @@ export const Food = [
     ],
   },
   {
+    id: "72",
     name: "Pear Sage",
     price: "$11.5",
     ingrediants: [
@@ -498,6 +559,7 @@ export const Food = [
     ],
   },
   {
+    id: "73",
     name: "Beet and Apple",
     price: "$11.5",
     ingrediants: [
@@ -510,6 +572,7 @@ export const Food = [
     ],
   },
   {
+    id: "74",
     name: "Caesar Lyon",
     price: "$11.5",
     ingrediants: [
@@ -524,16 +587,19 @@ export const Food = [
   },
   {
     type: "Soups",
+    id: "75",
     name: "Onion Soup",
     price: "$7",
     ingrediants: ["onion soup, ", "croutons, ", "melted gruyere"],
   },
   {
+    id: "76",
     name: "Soup of the Day",
     price: ["$5 ", "$7"],
   },
   {
     type: "Grain Bowls",
+    id: "77",
     name: "Harvest",
     price: "$11.5",
     ingrediants: [
@@ -547,6 +613,7 @@ export const Food = [
     ],
   },
   {
+    id: "78",
     name: "Shroom",
     price: "$11.5",
     ingrediants: [
@@ -559,6 +626,7 @@ export const Food = [
     ],
   },
   {
+    id: "79",
     name: "Mediterranean",
     price: "$11.5",
     ingrediants: [
@@ -573,6 +641,7 @@ export const Food = [
     ],
   },
   {
+    id: "80",
     name: "Moroccan",
     price: "$11.5",
     ingrediants: [
@@ -586,6 +655,7 @@ export const Food = [
     ],
   },
   {
+    id: "81",
     name: "Spicy Thai",
     price: "$11.5",
     ingrediants: [
@@ -602,6 +672,7 @@ export const Food = [
     ],
   },
   {
+    id: "82",
     name: "Asian Garden",
     price: "$11.5",
     ingrediants: [
@@ -615,6 +686,7 @@ export const Food = [
     ],
   },
   {
+    id: "83",
     name: "Nordic",
     price: "$11.5",
     ingrediants: [
@@ -628,6 +700,7 @@ export const Food = [
     ],
   },
   {
+    id: "84",
     name: "Kimchi",
     price: "$11.5",
     ingrediants: [
@@ -644,22 +717,27 @@ export const Food = [
     ],
   },
   {
+    id: "85",
     type: "Add Protein",
   },
   {
+    id: "86",
     name: "Boiled Egg",
     price: "$1",
   },
   {
+    id: "87",
     name: "Tofu",
     price: "$2",
   },
   {
+    id: "88",
     name: "Roasted Chicken Breast",
     price: "$2",
   },
   {
     type: "Sandwiches",
+    id: "89",
     choice: "Choice of Sourdough or Seven Grain Bread",
     name: "Turkey Bacon",
     price: "$9",
@@ -673,6 +751,7 @@ export const Food = [
     choices: ["swiss or ", "provolone, "],
   },
   {
+    id: "90",
     name: "Chicken Salad",
     price: "$9",
     ingrediants: [
@@ -685,11 +764,13 @@ export const Food = [
     ],
   },
   {
+    id: "91",
     name: "Caprese",
     price: "$9",
     ingrediants: ["fresh mozzarella, ", "tomato, ", "pesto, ", "baguette"],
   },
   {
+    id: "92",
     name: "BBQ Veg/Chix Burger",
     price: "$10",
     ingrediants: [
@@ -705,6 +786,7 @@ export const Food = [
     ],
   },
   {
+    id: "93",
     name: "Shroom Veg/Chix Burger",
     price: "$10",
     ingrediants: [
@@ -718,6 +800,7 @@ export const Food = [
     ],
   },
   {
+    id: "94",
     name: "Avo Basil Veg/Chix Burger",
     price: "$10",
     ingrediants: [
