@@ -5,20 +5,26 @@ import AddToCartModal from "../addToCartModal/addToCartModal"
 
 const MenuDrinks = (props) => {
   const [show, setShow] = useState(false)
+  const [menuItem, setMenuItem] = useState({})
+
+  const handleClick = (item) => {
+    setShow(true)
+    setMenuItem(item)
+  }
 
 return (
     <div>
-        {Drinks.map((item, itemIdx) => (
-            <div key={item.id} className={itemIdx % 2 === 0 }>
+        {show && <AddToCartModal item={menuItem} show={show} setShow={setShow}/>}
+        {Drinks.map((item) => (
+            <div key={item.id} >
               <div >
              <h1 className="text-4xl font-extralight pt-6">{item.type}</h1>
-             <button onClick={() => setShow(true)}>
+             <button onClick={() => handleClick(item)}>
              <h2 className="flex w-56 justify-between font-extralight text-xl">
                {item.item}
                <div>{item.name}</div><div>{item.price} </div></h2>
-             <p className="flex tgGreen text-sm w-48 text-left"><i>{item.ingrediants}{item.blend}</i></p>
+               <p className="flex tgGreen text-sm w-48 text-left">{item.ingrediants && <i>{item.ingrediants.join(', ')}</i>}{item.blend && <i>{item.blend.join(' ')}</i>}</p>
               </button>
-              <AddToCartModal show={show} setShow={setShow}/>
               </div>
             </div>
           ))}
