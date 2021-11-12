@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 500px;
+    height: 800px;
     z-index: 90;
     background: rgba(0, 0, 0, 0.33);
   }
@@ -13,3 +13,6 @@
     background-color: #EAE5DF;
     ;
   }
+  .tgGreen {
+    color: #5AA295;
+}

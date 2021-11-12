@@ -1988,24 +1988,24 @@ import logo from "../images/logo.svg"
 const Menu = props => (
   <Layout>
     <Seo title="Menu" />
-    <div className="relative ht">
-      <div className="ht absolute z-10 w-full ht overflow-scroll ">
-        
-          <div className="flex w-full justify-evenly">
-            <MenuDrinks />
-            <MenuFood />
-          </div>
-      </div>
       <div
         className="ht w-full flex absolute "
         style={{
           backgroundImage: `url(${logo})`,
           backgroundRepeat: `no-repeat`,
           backgroundPosition: `center`,
-          backgroundSize: `50%`,
-          opacity: `.3`,
+          backgroundSize: `80%`,
+          opacity: `.2`,
         }}
       ></div>
+    <div className="relative ">
+      <div className="ht absolute z-10 w-full ht overflow-scroll ">
+          <div className="flex w-full justify-evenly">
+            <MenuDrinks />
+            <MenuFood />
+          </div>
+      </div>
+     
     </div>
   </Layout>
 )

@@ -9,7 +9,10 @@ const AddToCartModal = ({ children, item, show, setShow, props }) => {
     <div className="backdrop">
         <div className="flex h-full">
       <div className="flex w-full justify-center items-center">
-        <div className=" w-80 h-auto modal pt-8 pl-6">
+        <div className=" w-80 h-auto modal pl-6">
+          <button className="pl-28" onClick={() => setShow(false)}>
+            Close
+          </button>
           <svg xmlns="http://www.w3.org/2000/svg" width="273" height="104">
             <g transform="translate(0 0.667)">
               <path
@@ -46,7 +49,7 @@ const AddToCartModal = ({ children, item, show, setShow, props }) => {
               {item.name}
               <div>{item.price}</div>
             </div>
-            
+            <div className="text-sm tgGreen">
             {/*///////////////////////////////////*/}
             {item.size ?
             <div className="w-60 grid grid-cols-2  font-extralight">
@@ -60,9 +63,9 @@ const AddToCartModal = ({ children, item, show, setShow, props }) => {
 {item.ingrediants ? item.ingrediants.map((items) => (
                 <div key={items.id}> 
                   <div className="w-60 grid grid-cols-2  font-extralight">
-            <div className="w-32">{items}</div>
+            <div className="w-48">{items}</div>
             <div className="w-2 col-end-5">
-            <input type="checkbox"/>
+            <input type="checkbox" name="ingrediants"/>
             </div>
             </div>
             </div>
@@ -93,23 +96,45 @@ const AddToCartModal = ({ children, item, show, setShow, props }) => {
             </div>
 )):<></>}
 
+{item.cheese ? item.cheese.map((cheeses) => (
+                <div key={cheeses.id}> 
+                  <div className="w-60 grid grid-cols-2  font-extralight">
+            <div className="w-32">{cheeses}</div>
+            <div className="w-2 col-end-5">
+            <input type="radio" value={cheeses} name="cheeses"/>
+            </div>
+            </div>
+            </div>
+)):<></>}
 
-              {item.cheese}
-              {item.bread}
-              {item.patty}
+{item.bread ? item.bread.map((breads) => (
+                <div key={breads.id}> 
+                  <div className="w-60 grid grid-cols-2  font-extralight">
+            <div className="w-32">{breads}</div>
+            <div className="w-2 col-end-5">
+            <input type="radio" value={breads} name="breads"/>
+            </div>
+            </div>
+            </div>
+)):<></>}
+
+{item.patty ? item.patty.map((pattys) => (
+                <div key={pattys.id}> 
+                  <div className="w-60 grid grid-cols-2  font-extralight">
+            <div className="w-32">{pattys}</div>
+            <div className="w-2 col-end-5">
+            <input type="radio" value={pattys} name="pattys"/>
+            </div>
+            </div>
+            </div>
+)):<></>}
+
             </div>
             
-            <div className="flex justify-between w-64 font-extralight text-xl">
-            Total:
-            <div>
-             $8
-            </div>
-            </div>
+        </div>
+            <button className="-ml-6 -mr-6 w-80 h-12 bg-blue-400">Add {item.price} to cart</button>
           </div>
 
-          <button className="pl-28" onClick={() => setShow(false)}>
-            Close
-          </button>
           <div>{children}</div>
         </div>
       </div>

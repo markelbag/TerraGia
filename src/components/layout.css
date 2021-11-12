@@ -6,3 +6,6 @@ body {
 .bottomborder {
   border-bottom: 1px solid #E6C6D1;
 }
+.size {
+  height: 820px;
+}

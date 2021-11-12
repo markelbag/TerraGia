@@ -15,9 +15,9 @@ const MenuFood = (props) => {
 
     return (
     <div>
-        <AddToCartModal item={menuItem} show={show} setShow={setShow}/>
-        {Food.map((item, itemIdx) => (
-            <div key={item.id} className={itemIdx % 2 === 0 }>
+       {show && <AddToCartModal item={menuItem} show={show} setShow={setShow}/>}
+        {Food.map((item) => (
+            <div key={item.id} >
               <div >
              <h1 className="text-4xl font-extralight pt-6">{item.type}</h1>
              <div className="flex w-60 text-left">{item.item}{item.choice}</div>
@@ -25,8 +25,8 @@ const MenuFood = (props) => {
              <button onClick={() => handleClick(item)}>
              <h2 className="flex w-56 text-left justify-between font-extralight text-xl">
                <div>{item.name}</div><div>{item.price} </div></h2>
-             <p className="flex tgGreen text-sm w-48 text-left"><i>{item.ingrediants}{item.blend}{item.choices}
-             </i></p>
+             <p className=" tgGreen text-sm w-48 text-left">{item.ingrediants && <i>{item.ingrediants.join(', ')}</i>}{item.choices && <i>{item.choices.join(' ')}</i>}
+             </p>
              </button>
               </div>
             </div>
