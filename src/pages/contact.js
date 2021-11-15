@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <Layout>
       <Seo title="Contact" />
-     contact stuff
+      contact stuff
     </Layout>
   )
 }
