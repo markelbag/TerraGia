@@ -1,9 +1,17 @@
 import React from "react"
-import { Link } from "gatsby"
+import { useState } from "react"
+import QuickView from "./quickView"
 
 const CartIcon = () => {
+  const [show, setShow] = useState(false)
+  const handleClick = () => {
+    setShow(true)
+  }
+
   return (
-    <Link to="/">
+    <div>
+      {show && <QuickView  show={show} setShow={setShow} />}
+    <button onClick={() => handleClick()}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-6 w-6"
@@ -21,7 +29,8 @@ const CartIcon = () => {
       <div className="-mt-4 ml-2 flex">
         <div className="text-xs w-3 h-3">3</div>
       </div>
-    </Link>
+    </button>
+    </div>
   )
 }
 

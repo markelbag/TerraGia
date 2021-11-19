@@ -10,5 +10,6 @@ module.exports = {
   plugins: [
     'gatsby-plugin-postcss',
     require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/forms'),
   ],
 }
