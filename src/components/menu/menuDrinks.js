@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useState } from "react"
-import { Drinks } from "../../../data"
+import { Drinks } from "../../../data2"
 import AddToCartModal from "../addToCartModal/addToCartModal"
 
 const MenuDrinks = props => {
@@ -21,18 +21,23 @@ const MenuDrinks = props => {
           <div>
             <h1 className="text-4xl font-extralight pt-6">{item.type}</h1>
             <button onClick={() => handleClick(item)}>
+                {item.items.map((item) => ( 
               <h2 className="flex w-64 justify-between font-extralight text-xl">
-                {item.item}
                 <div>{item.name}</div>
                 <div>{item.price} </div>
-              </h2>
-              <p className="flex tgGreen text-sm w-48 text-left">
+                <p className="flex tgGreen text-sm w-48 text-left">
                 {item.ingrediants && <i>{item.ingrediants.join(", ")}</i>}
-                {item.blend && <i>{item.blend.join(" ")}</i>}
+                {/* {item.options.map((option)=> (
+                  <div>{option.type}</div>
+                ))} */}
               </p>
+                </h2>
+
+                ))}
             </button>
           </div>
         </div>
+
       ))}
     </div>
   )

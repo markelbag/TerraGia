@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useState } from "react"
-import { Food } from "../../../data"
+import { Food } from "../../../data2"
 import AddToCartModal from "../addToCartModal/addToCartModal"
 
 const MenuFood = props => {
