@@ -1,8 +1,11 @@
 import React from "react"
+import { useState } from "react"
 import { createPortal } from "react-dom"
 import "./addToCartModal.css"
 
 const AddToCartModal = ({ children, item, show, setShow, props }) => {
+  const [price, setPrice] = useState(item.price)
+
   console.log(item.item)
   const content = show && (
     <div className="backdrop">
@@ -50,13 +53,17 @@ const AddToCartModal = ({ children, item, show, setShow, props }) => {
               <div className="text-sm tgGreen">
                 {/*///////////////////////////////////*/}
                 {item.size ? (
+                  <form onSubmit={() => console.log("sumbit")}>
                   <div className="w-60 grid grid-cols-2  font-extralight">
                     <div className="w-2">{item.size}</div>
                     <div className="w-2 col-end-5">
-                      <input type="radio" value="small" name="size" />
-                      <input type="radio" value="large" name="size" />
+                      {item.size.map((size, index) => 
+                      <input type="radio" value={size} name="size" />)
+                      }                   
                     </div>
                   </div>
+
+                  </form>
                 ) : (
                   <></>
                 )}

@@ -10,6 +10,7 @@ const MenuDrinks = props => {
   const handleClick = item => {
     setShow(true)
     setMenuItem(item)
+    console.log(item.price)
   }
 
   return (
