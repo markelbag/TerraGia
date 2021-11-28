@@ -4,9 +4,10 @@ import { createPortal } from "react-dom"
 import "./addToCartModal.css"
 
 const AddToCartModal = ({ children, item, show, setShow, props }) => {
-  const [price, setPrice] = useState(item.price)
+  const [price, setPrice] = useState(item.basePrice)
+  console.log(price)
 
-  console.log(item.item)
+  console.log(item)
   const content = show && (
     <div className="backdrop">
       <div className="flex h-full">
@@ -47,22 +48,21 @@ const AddToCartModal = ({ children, item, show, setShow, props }) => {
             </svg>
             <div>
               <div className="flex justify-between w-64 font-extralight text-xl">
-                {item.name}
-                <div>{item.price}</div>
+                <div> {item.name}</div>
+                <div>{item.basePrice}</div>
               </div>
               <div className="text-sm tgGreen">
                 {/*///////////////////////////////////*/}
                 {item.size ? (
                   <form onSubmit={() => console.log("sumbit")}>
-                  <div className="w-60 grid grid-cols-2  font-extralight">
-                    <div className="w-2">{item.size}</div>
-                    <div className="w-2 col-end-5">
-                      {item.size.map((size, index) => 
-                      <input type="radio" value={size} name="size" />)
-                      }                   
+                    <div className="w-60 grid grid-cols-2  font-extralight">
+                      <div className="w-2">{item.size}</div>
+                      <div className="w-2 col-end-5">
+                        {item.size.map((size, index) => (
+                          <input type="radio" value={size} name="size" />
+                        ))}
+                      </div>
                     </div>
-                  </div>
-
                   </form>
                 ) : (
                   <></>
@@ -85,78 +85,27 @@ const AddToCartModal = ({ children, item, show, setShow, props }) => {
                 {/*/////////////////////////////////////*/}
 
                 <div>
-                  {item.blend ? (
-                    item.blend.map(blends => (
-                      <div key={blends.id}>
-                        <div className="w-60 grid grid-cols-2  font-extralight">
-                          <div className="w-32">{blends}</div>
-                          <div className="w-2 col-end-5">
-                            <input type="radio" value={blends} name="blends" />
-                          </div>
-                        </div>
-                      </div>
-                    ))
-                  ) : (
-                    <></>
-                  )}
-
-                  {item.milk ? (
-                    item.milk.map(milks => (
-                      <div key={milks.id}>
-                        <div className="w-60 grid grid-cols-2  font-extralight">
-                          <div className="w-32">{milks}</div>
-                          <div className="w-2 col-end-5">
-                            <input type="radio" value={milks} name="milks" />
-                          </div>
-                        </div>
-                      </div>
-                    ))
-                  ) : (
-                    <></>
-                  )}
-
-                  {item.cheese ? (
-                    item.cheese.map(cheeses => (
-                      <div key={cheeses.id}>
-                        <div className="w-60 grid grid-cols-2  font-extralight">
-                          <div className="w-32">{cheeses}</div>
-                          <div className="w-2 col-end-5">
-                            <input
-                              type="radio"
-                              value={cheeses}
-                              name="cheeses"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    ))
-                  ) : (
-                    <></>
-                  )}
-
-                  {item.bread ? (
-                    item.bread.map(breads => (
-                      <div key={breads.id}>
-                        <div className="w-60 grid grid-cols-2  font-extralight">
-                          <div className="w-32">{breads}</div>
-                          <div className="w-2 col-end-5">
-                            <input type="radio" value={breads} name="breads" />
-                          </div>
-                        </div>
-                      </div>
-                    ))
-                  ) : (
-                    <></>
-                  )}
-
-                  {item.patty ? (
-                    item.patty.map(pattys => (
-                      <div key={pattys.id}>
-                        <div className="w-60 grid grid-cols-2  font-extralight">
-                          <div className="w-32">{pattys}</div>
-                          <div className="w-2 col-end-5">
-                            <input type="radio" value={pattys} name="pattys" />
-                          </div>
+                  {item.options ? (
+                    item.options.map(option => (
+                      <div key={option.id}>
+                        <div className="w-60 grid grid-cols-2 font-extralight">
+                          {option.values.map((value, index) => (
+                            <div className="flex justify-between w-64 col-end-5">
+                              <div>
+                                <input
+                                  type="radio"
+                                  id={value}
+                                  value={value}
+                                  name={option.type}
+                                  onChange={() => console.log("let's fix this")}
+                                />
+                                <label for={value}>{value}</label>{" "}
+                              </div>
+                              {option.addedPrice[index] > 0 && (
+                                <span>+{option.addedPrice[index]}</span>
+                              )}
+                            </div>
+                          ))}
                         </div>
                       </div>
                     ))

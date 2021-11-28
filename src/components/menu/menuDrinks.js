@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useState } from "react"
-import { Drinks } from "../../../data2"
+import { DrinksMenu } from "../../../DrinksMenu"
 import AddToCartModal from "../addToCartModal/addToCartModal"
 
 const MenuDrinks = props => {
@@ -16,28 +16,25 @@ const MenuDrinks = props => {
   return (
     <div>
       {show && <AddToCartModal item={menuItem} show={show} setShow={setShow} />}
-      {Drinks.map(item => (
-        <div key={item.id}>
+      {DrinksMenu.map(drinkCategory => (
+        <div key={drinkCategory.id}>
           <div>
-            <h1 className="text-4xl font-extralight pt-6">{item.type}</h1>
-            <button onClick={() => handleClick(item)}>
-                {item.items.map((item) => ( 
-              <h2 className="flex w-64 justify-between font-extralight text-xl">
-                <div>{item.name}</div>
-                <div>{item.price} </div>
-                <p className="flex tgGreen text-sm w-48 text-left">
-                {item.ingrediants && <i>{item.ingrediants.join(", ")}</i>}
-                {/* {item.options.map((option)=> (
-                  <div>{option.type}</div>
-                ))} */}
-              </p>
+            <h1 className="text-4xl font-extralight pt-6">
+              {drinkCategory.category}
+            </h1>
+            {drinkCategory.drinks.map(drink => (
+              <>
+                <h2 onClick={() => handleClick(drink)} className="flex w-72 justify-between font-extralight text-xl">
+                  <div>{drink.name}</div>
+                  <div>{drink.basePrice}</div>
                 </h2>
-
-                ))}
-            </button>
+                <p className="flex tgGreen text-sm w-64 text-left">
+                  {drink.ingrediants && <i>{drink.ingrediants.join(", ")}</i>}
+                </p>
+              </>
+            ))}
           </div>
         </div>
-
       ))}
     </div>
   )

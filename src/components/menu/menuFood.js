@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useState } from "react"
-import { Food } from "../../../data2"
+import { FoodMenu } from "../../../FoodMenu"
 import AddToCartModal from "../addToCartModal/addToCartModal"
 
 const MenuFood = props => {
@@ -15,25 +15,23 @@ const MenuFood = props => {
   return (
     <div>
       {show && <AddToCartModal item={menuItem} show={show} setShow={setShow} />}
-      {Food.map(item => (
-        <div key={item.id}>
+      {FoodMenu.map(foodCategory => (
+        <div key={foodCategory.id}>
           <div>
-            <h1 className="text-4xl font-extralight pt-6">{item.type}</h1>
-            <div className="flex w-60 text-left">
-              {item.item}
-              {item.choice}
-            </div>
-
-            <button onClick={() => handleClick(item)}>
-              <h2 className="flex w-56 text-left justify-between font-extralight text-xl">
-                <div>{item.name}</div>
-                <div>{item.price} </div>
-              </h2>
-              <p className=" tgGreen text-sm w-48 text-left">
-                {item.ingrediants && <i>{item.ingrediants.join(", ")}</i>}
-                {item.choices && <i>{item.choices.join(" ")}</i>}
-              </p>
-            </button>
+            <h1 className="text-4xl font-extralight pt-6">
+              {foodCategory.category}
+            </h1>
+            {foodCategory.foods.map(food => (
+              <>
+                <h2 onClick={() => handleClick(food)} className="flex w-72 justify-between font-extralight text-xl">
+                  <div>{food.name}</div>
+                  <div>{food.basePrice}</div>
+                </h2>
+                <p className="flex tgGreen text-sm w-64 text-left">
+                  {food.ingrediants && <i>{food.ingrediants.join(", ")}</i>}
+                </p>
+              </>
+            ))}
           </div>
         </div>
       ))}
