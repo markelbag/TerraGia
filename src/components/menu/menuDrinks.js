@@ -10,28 +10,27 @@ const MenuDrinks = props => {
   const handleClick = item => {
     setShow(true)
     setMenuItem(item)
-    console.log(item.price)
   }
 
   return (
     <div>
       {show && <AddToCartModal item={menuItem} show={show} setShow={setShow} />}
       {DrinksMenu.map(drinkCategory => (
-        <div key={drinkCategory.id}>
+        <div key={drinkCategory.category}>
           <div>
             <h1 className="text-4xl font-extralight pt-6">
               {drinkCategory.category}
             </h1>
             {drinkCategory.drinks.map(drink => (
-              <>
-                <h2 onClick={() => handleClick(drink)} className="flex w-72 justify-between font-extralight text-xl">
+              <div key={drink.id}>
+                <h2 onClick={() => handleClick(drink)}className="flex w-72 justify-between font-extralight text-xl">
                   <div>{drink.name}</div>
                   <div>{drink.basePrice}</div>
                 </h2>
                 <p className="flex tgGreen text-sm w-64 text-left">
                   {drink.ingrediants && <i>{drink.ingrediants.join(", ")}</i>}
                 </p>
-              </>
+              </div>
             ))}
           </div>
         </div>

@@ -192,16 +192,17 @@ export const DrinksMenu = [
         name: "Fortify",
         ingrediants: ["hibiscus", "chamomile", "marshmallow", "spearmint"],
         basePrice: 4,
-        options: [
-          {
-            type: "sizes",
-            values: ["small", "large"],
-            addedPrice: [0, 1],
-            formTyoe: "single",
+        options: {
+          sizes: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Small", price: 0 },
+              { id: 2, name: "Large", price: 1 },
+            ],
           },
-        ],
+        },
       },
-
       {
         id: "2",
         name: "Rejuvenate",
@@ -212,14 +213,16 @@ export const DrinksMenu = [
           "peppermint",
           "candula petals",
         ],
-        options: [
-          {
-            type: "sizes",
-            values: ["small", "large"],
-            addedPrice: [0, 1],
-            formTyoe: "single",
+        options: {
+          sizes: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Small", price: 0 },
+              { id: 2, name: "Large", price: 1 },
+            ],
           },
-        ],
+        },
       },
       {
         id: "3",
@@ -235,14 +238,16 @@ export const DrinksMenu = [
           "orange peel",
           "st johns wort",
         ],
-        options: [
-          {
-            type: "sizes",
-            values: ["small", "large"],
-            addedPrice: [0, 1],
-            formTyoe: "single",
+        options: {
+          sizes: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Small", price: 0 },
+              { id: 2, name: "Large", price: 1 },
+            ],
           },
-        ],
+        },
       },
       {
         id: "4",
@@ -257,14 +262,16 @@ export const DrinksMenu = [
           "cayenne",
           "black pepper",
         ],
-        options: [
-          {
-            type: "sizes",
-            values: ["small", "large"],
-            addedPrice: [0, 1],
-            formTyoe: "single",
+        options: {
+          sizes: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Small", price: 0 },
+              { id: 2, name: "Large", price: 1 },
+            ],
           },
-        ],
+        },
       },
     ],
   },
@@ -275,19 +282,26 @@ export const DrinksMenu = [
         id: "1",
         name: "Belgian Hot Chocolate",
         basePrice: 5,
-        options: [
-          {
-            type: "milk",
-            values: ["whole", "soy", "oat"],
-            addedPrice: [0, 0, 0],
-            formType: "single",
+        options: {
+          milks: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Oat", price: 0 },
+              { id: 2, name: "Soy", price: 0 },
+              { id: 3, name: "Whole", price: 0 },
+            ],
           },
-          {
-            type: "blend",
-            values: ["whole", "soy", "oat"],
-            addedPrice: [0, 0, 0],
+          blends: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Light", price: 0 },
+              { id: 2, name: "Medium", price: 0 },
+              { id: 3, name: "Dark", price: 0 },
+            ],
           },
-        ],
+        },
       },
     ],
   },
@@ -298,379 +312,531 @@ export const DrinksMenu = [
         id: "1",
         name: "Drip Coffee",
         basePrice: 2.25,
-        options: [
-          {
-            type: "sizes",
-            values: ["small", "large"],
-            addedPrice: [0, 1],
-            formTyoe: "single",
+        options: {
+          sizes: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Small", price: 0 },
+              { id: 2, name: "Large", price: 1 },
+            ],
           },
-          {
-            type: "flavors",
-            values: ["Caramel", "Vanilla", "Hazelnut", "Seasonal"],
-            addedPrice: [0, 1],
-            formType: "multi",
+          flavors: {
+            selectType: "multi",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Caramel", price: 0.5 },
+              { id: 2, name: "Vanilla", price: 0.5 },
+              { id: 3, name: "Hazelnut", price: 0.5 },
+              { id: 4, name: "Seasonal", price: 0.5 },
+            ],
           },
-          {
-            type: "hot or iced",
-            values: ["hot", "iced"],
-            addedPrice: [0, 0],
-            formType: "single",
+          iced: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Hot", price: 0 },
+              { id: 2, name: "Iced", price: 0.5 },
+            ],
           },
-        ],
+        },
       },
       {
         id: "2",
         name: "Espresso",
         basePrice: 2.5,
-        options: [
-          {
-            type: "sizes",
-            values: ["small", "large"],
-            addedPrice: [0, 1],
-            formTyoe: "single",
+        options: {
+          sizes: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Small", price: 0 },
+              { id: 2, name: "Large", price: 1 },
+            ],
           },
-          {
-            type: "flavors",
-            values: ["Caramel", "Vanilla", "Hazelnut", "Seasonal"],
-            addedPrice: [0, 1],
-            formType: "multi",
+          flavors: {
+            selectType: "multi",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Caramel", price: 0.5 },
+              { id: 2, name: "Vanilla", price: 0.5 },
+              { id: 3, name: "Hazelnut", price: 0.5 },
+              { id: 4, name: "Seasonal", price: 0.5 },
+            ],
           },
-          {
-            type: "hot or iced",
-            values: ["hot", "iced"],
-            addedPrice: [0, 0],
-            formType: "single",
+          iced: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Hot", price: 0 },
+              { id: 2, name: "Iced", price: 0.5 },
+            ],
           },
-        ],
+        },
       },
       {
         id: "3",
         name: "Americano",
         basePrice: 2.75,
-        options: [
-          {
-            type: "sizes",
-            values: ["small", "large"],
-            addedPrice: [0, 1],
-            formTyoe: "single",
+        options: {
+          sizes: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Small", price: 0 },
+              { id: 2, name: "Large", price: 1 },
+            ],
           },
-          {
-            type: "flavors",
-            values: ["Caramel", "Vanilla", "Hazelnut", "Seasonal"],
-            addedPrice: [0, 1],
-            formType: "multi",
+          flavors: {
+            selectType: "multi",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Caramel", price: 0.5 },
+              { id: 2, name: "Vanilla", price: 0.5 },
+              { id: 3, name: "Hazelnut", price: 0.5 },
+              { id: 4, name: "Seasonal", price: 0.5 },
+            ],
           },
-          {
-            type: "hot or iced",
-            values: ["hot", "iced"],
-            addedPrice: [0, 0],
-            formType: "single",
+          iced: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Hot", price: 0 },
+              { id: 2, name: "Iced", price: 0.5 },
+            ],
           },
-        ],
+        },
       },
       {
         id: "4",
         name: "Cappucchino",
         basePrice: 3.75,
-        options: [
-          {
-            type: "sizes",
-            values: ["small", "large"],
-            addedPrice: [0, 1],
-            formTyoe: "single",
+        options: {
+          sizes: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Small", price: 0 },
+              { id: 2, name: "Large", price: 1 },
+            ],
           },
-          {
-            type: "milk",
-            values: ["whole", "soy", "oat"],
-            addedPrice: [0, 0, 0],
-            formType: "single",
+          milks: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Oat", price: 0 },
+              { id: 2, name: "Soy", price: 0 },
+              { id: 3, name: "Whole", price: 0 },
+            ],
           },
-          {
-            type: "flavors",
-            values: ["Caramel", "Vanilla", "Hazelnut", "Seasonal"],
-            addedPrice: [0, 1],
-            formType: "multi",
+          flavors: {
+            selectType: "multi",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Caramel", price: 0.5 },
+              { id: 2, name: "Vanilla", price: 0.5 },
+              { id: 3, name: "Hazelnut", price: 0.5 },
+              { id: 4, name: "Seasonal", price: 0.5 },
+            ],
           },
-          {
-            type: "hot or iced",
-            values: ["hot", "iced"],
-            addedPrice: [0, 0],
-            formType: "single",
+          iced: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Hot", price: 0 },
+              { id: 2, name: "Iced", price: 0.5 },
+            ],
           },
-        ],
+        },
       },
       {
         id: "5",
         name: "Latte",
         basePrice: 4,
-        options: [
-          {
-            type: "sizes",
-            values: ["small", "large"],
-            addedPrice: [0, 1],
-            formTyoe: "single",
+        options: {
+          sizes: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Small", price: 0 },
+              { id: 2, name: "Large", price: 1 },
+            ],
           },
-          {
-            type: "milk",
-            values: ["whole", "soy", "oat"],
-            addedPrice: [0, 0, 0],
-            formType: "single",
+          milks: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Oat", price: 0 },
+              { id: 2, name: "Soy", price: 0 },
+              { id: 3, name: "Whole", price: 0 },
+            ],
           },
-          {
-            type: "flavors",
-            values: ["Caramel", "Vanilla", "Hazelnut", "Seasonal"],
-            addedPrice: [0, 1],
-            formType: "multi",
+          flavors: {
+            selectType: "multi",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Caramel", price: 0.5 },
+              { id: 2, name: "Vanilla", price: 0.5 },
+              { id: 3, name: "Hazelnut", price: 0.5 },
+              { id: 4, name: "Seasonal", price: 0.5 },
+            ],
           },
-          {
-            type: "hot or iced",
-            values: ["hot", "iced"],
-            addedPrice: [0, 0],
-            formType: "single",
+          iced: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Hot", price: 0 },
+              { id: 2, name: "Iced", price: 0.5 },
+            ],
           },
-        ],
+        },
       },
       {
         id: "6",
         name: "Lavender Latte",
         basePrice: 4.5,
-        options: [
-          {
-            type: "sizes",
-            values: ["small", "large"],
-            addedPrice: [0, 1],
-            formTyoe: "single",
+        options: {
+          sizes: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Small", price: 0 },
+              { id: 2, name: "Large", price: 1 },
+            ],
           },
-          {
-            type: "milk",
-            values: ["whole", "soy", "oat"],
-            addedPrice: [0, 0, 0],
-            formType: "single",
+          milks: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Oat", price: 0 },
+              { id: 2, name: "Soy", price: 0 },
+              { id: 3, name: "Whole", price: 0 },
+            ],
           },
-          {
-            type: "flavors",
-            values: ["Caramel", "Vanilla", "Hazelnut", "Seasonal"],
-            addedPrice: [0, 1],
-            formType: "multi",
+          flavors: {
+            selectType: "multi",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Caramel", price: 0.5 },
+              { id: 2, name: "Vanilla", price: 0.5 },
+              { id: 3, name: "Hazelnut", price: 0.5 },
+              { id: 4, name: "Seasonal", price: 0.5 },
+            ],
           },
-          {
-            type: "hot or iced",
-            values: ["hot", "iced"],
-            addedPrice: [0, 0],
-            formType: "single",
+          iced: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Hot", price: 0 },
+              { id: 2, name: "Iced", price: 0.5 },
+            ],
           },
-        ],
+        },
       },
       {
         id: "7",
         name: "Cardamom Latte",
         basePrice: 4.5,
-        options: [
-          {
-            type: "sizes",
-            values: ["small", "large"],
-            addedPrice: [0, 1],
-            formTyoe: "single",
+        options: {
+          sizes: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Small", price: 0 },
+              { id: 2, name: "Large", price: 1 },
+            ],
           },
-          {
-            type: "milk",
-            values: ["whole", "soy", "oat"],
-            addedPrice: [0, 0, 0],
-            formType: "single",
+          milks: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Oat", price: 0 },
+              { id: 2, name: "Soy", price: 0 },
+              { id: 3, name: "Whole", price: 0 },
+            ],
           },
-          {
-            type: "flavors",
-            values: ["Caramel", "Vanilla", "Hazelnut", "Seasonal"],
-            addedPrice: [0, 1],
-            formType: "multi",
+          flavors: {
+            selectType: "multi",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Caramel", price: 0.5 },
+              { id: 2, name: "Vanilla", price: 0.5 },
+              { id: 3, name: "Hazelnut", price: 0.5 },
+              { id: 4, name: "Seasonal", price: 0.5 },
+            ],
           },
-          {
-            type: "hot or iced",
-            values: ["hot", "iced"],
-            addedPrice: [0, 0],
-            formType: "single",
+          iced: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Hot", price: 0 },
+              { id: 2, name: "Iced", price: 0.5 },
+            ],
           },
-        ],
+        },
       },
       {
         id: "8",
         name: "Mocha Latte",
         basePrice: 4.5,
-        options: [
-          {
-            type: "sizes",
-            values: ["small", "large"],
-            addedPrice: [0, 1],
-            formTyoe: "single",
+        options: {
+          sizes: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Small", price: 0 },
+              { id: 2, name: "Large", price: 1 },
+            ],
           },
-          {
-            type: "milk",
-            values: ["whole", "soy", "oat"],
-            addedPrice: [0, 0, 0],
-            formType: "single",
+          milks: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Oat", price: 0 },
+              { id: 2, name: "Soy", price: 0 },
+              { id: 3, name: "Whole", price: 0 },
+            ],
           },
-          {
-            type: "flavors",
-            values: ["Caramel", "Vanilla", "Hazelnut", "Seasonal"],
-            addedPrice: [0, 1],
-            formType: "multi",
+          flavors: {
+            selectType: "multi",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Caramel", price: 0.5 },
+              { id: 2, name: "Vanilla", price: 0.5 },
+              { id: 3, name: "Hazelnut", price: 0.5 },
+              { id: 4, name: "Seasonal", price: 0.5 },
+            ],
           },
-          {
-            type: "hot or iced",
-            values: ["hot", "iced"],
-            addedPrice: [0, 0],
-            formType: "single",
+          iced: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Hot", price: 0 },
+              { id: 2, name: "Iced", price: 0.5 },
+            ],
           },
-        ],
+        },
       },
       {
         id: "9",
         name: "Dirty Chai",
         basePrice: 5.25,
-        options: [
-          {
-            type: "sizes",
-            values: ["small", "large"],
-            addedPrice: [0, 1],
-            formTyoe: "single",
+        options: {
+          sizes: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Small", price: 0 },
+              { id: 2, name: "Large", price: 1 },
+            ],
           },
-          {
-            type: "milk",
-            values: ["whole", "soy", "oat"],
-            addedPrice: [0, 0, 0],
-            formType: "single",
+          milks: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Oat", price: 0 },
+              { id: 2, name: "Soy", price: 0 },
+              { id: 3, name: "Whole", price: 0 },
+            ],
           },
-          {
-            type: "flavors",
-            values: ["Caramel", "Vanilla", "Hazelnut", "Seasonal"],
-            addedPrice: [0, 1],
-            formType: "multi",
+          flavors: {
+            selectType: "multi",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Caramel", price: 0.5 },
+              { id: 2, name: "Vanilla", price: 0.5 },
+              { id: 3, name: "Hazelnut", price: 0.5 },
+              { id: 4, name: "Seasonal", price: 0.5 },
+            ],
           },
-          {
-            type: "hot or iced",
-            values: ["hot", "iced"],
-            addedPrice: [0, 0],
-            formType: "single",
+          iced: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Hot", price: 0 },
+              { id: 2, name: "Iced", price: 0.5 },
+            ],
           },
-        ],
+        },
       },
-
     ],
   },
   {
     category: "Other Teas",
     drinks: [
-  {  
-    id: "39",
-    name: "Matcha Latte",
-    basePrice: 4.5,
-    ingrediants: ["organic matcha "],
-    size: ["small ", "large "],
-    milk: ["whole", "soy", "oat"],
-  },
-  {
-    id: "40",
-    name: "Chai Latte",
-    basePrice: 4.5,
-    ingrediants: ["housemade chai base "],
-    size: ["small ", "large "],
-    milk: ["whole", "soy", "oat"],
-  },
-  {
-    category: "White Heron Loose Leaf",
-    id: "41",
-    basePrice: 2.25,
-    size: ["small ", "large "],
-  },
-  {
-    id: "42",
-    type: "Caffinated",
-  },
-  {
-    id: "43",
-    name: "Oolong",
-  },
-  {
-    id: "44",
-    name: "Dubliners",
-  },
-  {
-    id: "45",
-    name: "Earl Grey",
-  },
-  {
-    id: "46",
-    name: "Chai",
-  },
-  {
-    id: "47",
-    name: "White Pomegranate",
-  },
-  {
-    id: "48",
-    name: "Green",
-  },
-  {
-    id: "49",
-    type: "Herbal",
-  },
-  {
-    id: "50",
-    name: "Cranberry Apple Ginger",
-  },
-  {
-    id: "51",
-    name: "Mintology",
-  },
-  {
-    id: "52",
-    name: "Lemon Berry",
-  },
-  {
-    id: "53",
-    name: "Chamomile Lavender",
-  },
-  {
-    id: "54",
-    name: "Rooibos",
-  },
-  {
-    id: "55",
-    name: "Spicy Licorice Mint",
-  },
-  {
-    id: "56",
-    name: "Any tea iced",
-    basePrice: 2.75,
-    size: ["small ", "large "],
-  },
-]
+      {
+        id: "39",
+        name: "Matcha Latte",
+        basePrice: 4.5,
+        ingrediants: ["organic matcha "],
+        options: {
+          sizes: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Small", price: 0 },
+              { id: 2, name: "Large", price: 1 },
+            ],
+          },
+          milks: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Oat", price: 0 },
+              { id: 2, name: "Soy", price: 0 },
+              { id: 3, name: "Whole", price: 0 },
+            ],
+          },
+          flavors: {
+            selectType: "multi",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Caramel", price: 0.5 },
+              { id: 2, name: "Vanilla", price: 0.5 },
+              { id: 3, name: "Hazelnut", price: 0.5 },
+              { id: 4, name: "Seasonal", price: 0.5 },
+            ],
+          },
+          iced: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Hot", price: 0 },
+              { id: 2, name: "Iced", price: 0.5 },
+            ],
+          },
+        },
+      },
+      {
+        id: "1",
+        name: "Chai Latte",
+        basePrice: 4.5,
+        ingrediants: ["housemade chai base "],
+        options: {
+          sizes: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Small", price: 0 },
+              { id: 2, name: "Large", price: 1 },
+            ],
+          },
+          milks: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Oat", price: 0 },
+              { id: 2, name: "Soy", price: 0 },
+              { id: 3, name: "Whole", price: 0 },
+            ],
+          },
+          flavors: {
+            selectType: "multi",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Caramel", price: 0.5 },
+              { id: 2, name: "Vanilla", price: 0.5 },
+              { id: 3, name: "Hazelnut", price: 0.5 },
+              { id: 4, name: "Seasonal", price: 0.5 },
+            ],
+          },
+          iced: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Hot", price: 0 },
+              { id: 2, name: "Iced", price: 0.5 },
+            ],
+          },
+        },
+      },
+      {
+        category: "White Heron Loose Leaf",
+        id: "3",
+        basePrice: 2.25,
+        options: {
+          sizes: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Small", price: 0 },
+              { id: 2, name: "Large", price: 1 },
+            ],
+          },
+          milks: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Oat", price: 0 },
+              { id: 2, name: "Soy", price: 0 },
+              { id: 3, name: "Whole", price: 0 },
+            ],
+          },
+          flavors: {
+            selectType: "multi",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Caramel", price: 0.5 },
+              { id: 2, name: "Vanilla", price: 0.5 },
+              { id: 3, name: "Hazelnut", price: 0.5 },
+              { id: 4, name: "Seasonal", price: 0.5 },
+            ],
+          },
+          iced: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Hot", price: 0 },
+              { id: 2, name: "Iced", price: 0.5 },
+            ],
+          },
+          caffinated: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Oolong", price: 0 },
+              { id: 2, name: "Dubliners", price: 0 },
+              { id: 3, name: "Earl Grey", price: 0 },
+              { id: 4, name: "Chai", price: 0 },
+              { id: 5, name: "White Pomegranate", price: 0 },
+              { id: 6, name: "Green", price: 0 },
+            ],
+          },
+          herbal: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Cranberry Apple Ginger", price: 0 },
+              { id: 2, name: "Mintology", price: 0 },
+              { id: 3, name: "Lemon Berry", price: 0 },
+              { id: 4, name: "Rooibos", price: 0 },
+              { id: 5, name: "Chamomile Lavender", price: 0 },
+              { id: 6, name: "Spicy Licorice Mint", price: 0 },
+            ],
+          },
+        },
+      },
+    ],
   },
   {
     category: "Bottled Drinks",
     drinks: [
       {
-        id: "57",
+        id: "1",
         basePrice: 2.5,
+        options: {
+          bottles: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Smart Water", price: 0 },
+              { id: 2, name: "San Pellegrino", price: 0 },
+              { id: 2, name: "Lemonade", price: 0 },
+              { id: 2, name: "Cranberry Juice", price: 0 },
+            ],
+          },
+        },
       },
-      {
-        id: "58",
-        name: "Smart Water",
-      },
-      {
-        id: "59",
-        name: "San Pellegrino",
-      },
-      {
-        id: "60",
-        name: "Lemonade",
-      },
-      {
-        id: "61",
-        name: "Cranberry Juice",
-      },
-    
-    ]
-  }
+    ],
+  },
 ]

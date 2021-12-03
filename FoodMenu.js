@@ -13,19 +13,24 @@ export const FoodMenu = [
           "tomato",
           "spinach ",
         ],
-        options: [
-          {
-            type: "bread",
-            values: ["Sourdough", "seven grain"],
-            addedPrice: [],
-            formType: "single",
+        options: {
+          bread: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Sourdough", price: 0 },
+              { id: 2, name: "Seven Grain", price: 0 },
+            ],
           },
-          {
-            type: "protien",
-            values: ["bacon", "ham"],
-            addedPrice: [ ],
+          meats: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Ham", price: 0 },
+              { id: 2, name: "Bacon", price: 0 },
+            ],
           },
-        ],
+        },
       },
       {
         id: "2",
@@ -41,6 +46,17 @@ export const FoodMenu = [
           "chimichurri",
           "seven grain toast",
         ],
+        options: {
+          proteins: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Chicken", price: 3 },
+              { id: 2, name: "Tofu", price: 2 },
+              { id: 3, name: "Boiled Egg", price: 1 },
+            ],
+          },
+        },
       },
       {
         id: "3",
@@ -55,6 +71,17 @@ export const FoodMenu = [
           "hot oil",
           "seven grain toast",
         ],
+        options: {
+          proteins: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Chicken", price: 3 },
+              { id: 2, name: "Tofu", price: 2 },
+              { id: 3, name: "Boiled Egg", price: 1 },
+            ],
+          },
+        },
       },
       {
         id: "4",
@@ -151,6 +178,17 @@ export const FoodMenu = [
           "mixed greens",
           "red wine vinaigrette",
         ],
+        options: {
+          proteins: {
+            selectType: "multi",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Chicken", price: 3 },
+              { id: 2, name: "Tofu", price: 2 },
+              { id: 3, name: "Boiled Egg", price: 1 },
+            ],
+          },
+        },
       },
       {
         id: "2",
@@ -165,6 +203,17 @@ export const FoodMenu = [
           "mixed greens",
           "apple cider dressing",
         ],
+        options: {
+          proteins: {
+            selectType: "multi",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Chicken", price: 3 },
+              { id: 2, name: "Tofu", price: 2 },
+              { id: 3, name: "Boiled Egg", price: 1 },
+            ],
+          },
+        },
       },
       {
         id: "3",
@@ -178,6 +227,17 @@ export const FoodMenu = [
           "arugula",
           "red wine vinaigrette",
         ],
+        options: {
+          proteins: {
+            selectType: "multi",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Chicken", price: 3 },
+              { id: 2, name: "Tofu", price: 2 },
+              { id: 3, name: "Boiled Egg", price: 1 },
+            ],
+          },
+        },
       },
       {
         id: "4",
@@ -192,6 +252,17 @@ export const FoodMenu = [
           "candied pecans",
           "mustard dressing",
         ],
+        options: {
+          proteins: {
+            selectType: "multi",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Chicken", price: 3 },
+              { id: 2, name: "Tofu", price: 2 },
+              { id: 3, name: "Boiled Egg", price: 1 },
+            ],
+          },
+        },
       },
     ],
   },
@@ -228,13 +299,17 @@ export const FoodMenu = [
           "green onions",
           "honey apple dressing",
         ],
-        options: [
-          {
-            type: "protien",
-            values: ["chicken", "tofu", "boiled egg"],
-            addedPrice: [0, 0, 0],
+        options: {
+          proteins: {
+            selectType: "multi",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Chicken", price: 3 },
+              { id: 2, name: "Tofu", price: 2 },
+              { id: 3, name: "Boiled Egg", price: 1 },
+            ],
           },
-        ],
+        },
       },
       {
         id: "2",
@@ -248,13 +323,17 @@ export const FoodMenu = [
           "hazelnuts",
           "pumpkin dressing",
         ],
-        options: [
-          {
-            type: "protien",
-            values: ["chicken", "tofu", "boiled egg"],
-            addedPrice: [0, 0, 0],
+        options: {
+          proteins: {
+            selectType: "multi",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Chicken", price: 3 },
+              { id: 2, name: "Tofu", price: 2 },
+              { id: 3, name: "Boiled Egg", price: 1 },
+            ],
           },
-        ],
+        },
       },
       {
         id: "3",
@@ -270,13 +349,17 @@ export const FoodMenu = [
           "roasted butternut squash and carrots",
           "lemon mint dressing",
         ],
-        options: [
-          {
-            type: "protien",
-            values: ["chicken", "tofu", "boiled egg"],
-            addedPrice: [0, 0, 0],
+        options: {
+          proteins: {
+            selectType: "multi",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Chicken", price: 3 },
+              { id: 2, name: "Tofu", price: 2 },
+              { id: 3, name: "Boiled Egg", price: 1 },
+            ],
           },
-        ],
+        },
       },
       {
         id: "4",
@@ -291,13 +374,17 @@ export const FoodMenu = [
           "almonds",
           "spicy tamarind dressing",
         ],
-        options: [
-          {
-            type: "protien",
-            values: ["chicken", "tofu", "boiled egg"],
-            addedPrice: [2, 2, 1],
+        options: {
+          proteins: {
+            selectType: "multi",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Chicken", price: 3 },
+              { id: 2, name: "Tofu", price: 2 },
+              { id: 3, name: "Boiled Egg", price: 1 },
+            ],
           },
-        ],
+        },
       },
       {
         id: "5",
@@ -315,13 +402,17 @@ export const FoodMenu = [
           "currants",
           "sriracha peanut dressing",
         ],
-        options: [
-          {
-            type: "protien",
-            values: ["chicken", "tofu", "boiled egg"],
-            addedPrice: [0, 0, 0],
+        options: {
+          proteins: {
+            selectType: "multi",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Chicken", price: 3 },
+              { id: 2, name: "Tofu", price: 2 },
+              { id: 3, name: "Boiled Egg", price: 1 },
+            ],
           },
-        ],
+        },
       },
       {
         id: "6",
@@ -336,13 +427,17 @@ export const FoodMenu = [
           "6",
           "sesame ginger dressing",
         ],
-        options: [
-          {
-            type: "protien",
-            values: ["chicken", "tofu", "boiled egg"],
-            addedPrice: [0, 0, 0],
+        options: {
+          proteins: {
+            selectType: "multi",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Chicken", price: 3 },
+              { id: 2, name: "Tofu", price: 2 },
+              { id: 3, name: "Boiled Egg", price: 1 },
+            ],
           },
-        ],
+        },
       },
       {
         id: "7",
@@ -357,13 +452,17 @@ export const FoodMenu = [
           "roasted beets",
           "creamy dill dressing",
         ],
-        options: [
-          {
-            type: "protien",
-            values: ["chicken", "tofu", "boiled egg"],
-            addedPrice: [0, 0, 0],
+        options: {
+          proteins: {
+            selectType: "multi",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Chicken", price: 3 },
+              { id: 2, name: "Tofu", price: 2 },
+              { id: 3, name: "Boiled Egg", price: 1 },
+            ],
           },
-        ],
+        },
       },
       {
         id: "8",
@@ -381,13 +480,17 @@ export const FoodMenu = [
           "poached egg",
           "gochujang dressing",
         ],
-        options: [
-          {
-            type: "protien",
-            values: ["chicken", "tofu", "boiled egg"],
-            addedPrice: [0, 0, 0],
+        options: {
+          proteins: {
+            selectType: "multi",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Chicken", price: 3 },
+              { id: 2, name: "Tofu", price: 2 },
+              { id: 3, name: "Boiled Egg", price: 1 },
+            ],
           },
-        ],
+        },
       },
     ],
   },
@@ -406,19 +509,24 @@ export const FoodMenu = [
           "tomato",
           "mayo ",
         ],
-        options: [
-          {
-            type: "bread",
-            values: ["whole", "soy", "oat"],
-            addedPrice: [0, 0, 0],
-            formType: "single",
+        options: {
+          bread: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Sourdough", price: 0 },
+              { id: 2, name: "Seven Grain", price: 0 },
+            ],
           },
-          {
-            type: "cheese",
-            values: ["whole", "soy", "oat"],
-            addedPrice: [0, 0, 0],
+          cheese: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Swiss", price: 0 },
+              { id: 2, name: "Provolone", price: 0 },
+            ],
           },
-        ],
+        },
       },
       {
         id: "2",
@@ -432,14 +540,24 @@ export const FoodMenu = [
           "mayo",
           "arugula",
         ],
-        options: [
-          {
-            type: "bread",
-            values: ["whole", "soy", "oat"],
-            addedPrice: [0, 0, 0],
-            formType: "single",
+        options: {
+          bread: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Sourdough", price: 0 },
+              { id: 2, name: "Seven Grain", price: 0 },
+            ],
           },
-        ],
+          cheese: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Swiss", price: 1 },
+              { id: 2, name: "Provolone", price: 1 },
+            ],
+          },
+        },
       },
       {
         id: "3",
@@ -461,13 +579,16 @@ export const FoodMenu = [
           "vegan mayo",
           "brioche ",
         ],
-        options: [
-          {
-            type: "patties",
-            values: ["whole", "soy", "oat"],
-            addedPrice: [0, 0, 0],
+        options: {
+          patty: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Chicken Patty", price: 0 },
+              { id: 2, name: "Veggie Patty", price: 0 },
+            ],
           },
-        ],
+        },
       },
       {
         id: "5",
@@ -481,13 +602,16 @@ export const FoodMenu = [
           "vegan mayo",
           "brioche ",
         ],
-        options: [
-          {
-            type: "patties",
-            values: ["whole", "soy", "oat"],
-            addedPrice: [0, 0, 0],
+        options: {
+          patty: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Chicken Patty", price: 0 },
+              { id: 2, name: "Veggie Patty", price: 0 },
+            ],
           },
-        ],
+        },
       },
       {
         id: "6",
@@ -501,13 +625,16 @@ export const FoodMenu = [
           "vegan mayo",
           "brioche ",
         ],
-        options: [
-          {
-            type: "patties",
-            values: ["whole", "soy", "oat"],
-            addedPrice: [0, 0, 0],
+        options: {
+          patty: {
+            selectType: "single",
+            selections: [
+              { id: null, name: "None", price: 0 },
+              { id: 1, name: "Chicken Patty", price: 0 },
+              { id: 2, name: "Veggie Patty", price: 0 },
+            ],
           },
-        ],
+        },
       },
     ],
   },
