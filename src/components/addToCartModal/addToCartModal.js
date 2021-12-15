@@ -74,6 +74,8 @@ const AddToCartModal = ({ children, item, show, setShow,value , props }) => {
                 <div> {item.name}</div>
                 <div>{item.basePrice}</div>
               </div>
+              <div className="tgGreen text-sm"><i>{item.ingrediants.join(", ")}</i></div>
+              
               {item.options && (
                 <>
                   {item.options.sizes && (
