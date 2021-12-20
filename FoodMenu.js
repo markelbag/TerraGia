@@ -14,7 +14,7 @@ export const FoodMenu = [
           "spinach ",
         ],
         options: {
-          bread: {
+          breads: {
             selectType: "single",
             selections: [
               { id: null, name: "None", price: 0 },
@@ -510,7 +510,7 @@ export const FoodMenu = [
           "mayo ",
         ],
         options: {
-          bread: {
+          breads: {
             selectType: "single",
             selections: [
               { id: null, name: "None", price: 0 },
@@ -541,7 +541,7 @@ export const FoodMenu = [
           "arugula",
         ],
         options: {
-          bread: {
+          breads: {
             selectType: "single",
             selections: [
               { id: null, name: "None", price: 0 },
@@ -580,7 +580,7 @@ export const FoodMenu = [
           "brioche ",
         ],
         options: {
-          patty: {
+          patties: {
             selectType: "single",
             selections: [
               { id: null, name: "None", price: 0 },
@@ -603,7 +603,7 @@ export const FoodMenu = [
           "brioche ",
         ],
         options: {
-          patty: {
+          patties: {
             selectType: "single",
             selections: [
               { id: null, name: "None", price: 0 },
@@ -626,7 +626,7 @@ export const FoodMenu = [
           "brioche ",
         ],
         options: {
-          patty: {
+          patties: {
             selectType: "single",
             selections: [
               { id: null, name: "None", price: 0 },

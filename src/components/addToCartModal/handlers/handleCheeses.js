@@ -15,14 +15,14 @@ export const HandleCheeses = ({ item }) => {
 
   return (
     <div className="text-sm tgGreen">
-      {item.options.cheeses && (
+      {item.options.cheese && (
         <RadioGroup value={selectedCheese} onChange={setSelectedCheese}>
           <RadioGroup.Label className="text-xl font-bold text-red-900">
             Select cheese
           </RadioGroup.Label>
 
           <div className="flex flex-wrap justify-between w-64 font-extralight text-xl">
-            {item.options.cheeses.selections.map((cheese, cheeseIdx) => (
+            {item.options.cheese.selections.map((cheese, cheeseIdx) => (
               <RadioGroup.Option
                 key={cheese.id}
                 value={cheese}

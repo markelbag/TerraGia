@@ -16,12 +16,11 @@ import HandleProteins from "./handlers/handleProteins"
 import CheckBoxGroup from "../checkbox/checkboxgroup"
 import HandlePatties from "./handlers/handlePatties"
 
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
 }
 
-const AddToCartModal = ({ children, item, show, setShow,value , props }) => {
+const AddToCartModal = ({ children, item, show, setShow, value, props }) => {
   const [price, setPrice] = useState(item.basePrice)
   const [selectedSize, setSelectedSize] = useState(
     item.options &&
@@ -42,12 +41,41 @@ const AddToCartModal = ({ children, item, show, setShow,value , props }) => {
       item.options.milks.selections[0]
   )
   const [selectedFlavor, setSelectedFlavor] = useState(
-    item.options && 
-    item.options.flavors &&
-    item.options.flavors.selections && 
-    item.options.flavors.selections[0]
+    item.options &&
+      item.options.flavors &&
+      item.options.flavors.selections &&
+      item.options.flavors.selections[0]
   )
-
+  const [selectedBlend, setSelectedBlend] = useState(
+    item.options &&
+      item.options.blends &&
+      item.options.blends.selections &&
+      item.options.blends.selections[0]
+  )
+  const [selectedBread, setSelectedBread] = useState(
+    item.options &&
+      item.options.breads &&
+      item.options.breads.selections &&
+      item.options.breads.selections[0]
+  )
+  const [selectedCheese, setSelectedCheese] = useState(
+    item.options &&
+      item.options.cheese &&
+      item.options.cheese.selections &&
+      item.options.cheese.selections[0]
+  )
+  const [selectedMeat, setSelectedMeat] = useState(
+    item.options &&
+      item.options.meats &&
+      item.options.meats.selections &&
+      item.options.meats.selections[0]
+  )
+  const [selectedPatty, setSelectedPatty] = useState(
+    item.options &&
+      item.options.patties &&
+      item.options.patties.selections &&
+      item.options.patties.selections[0]
+  )
   console.log()
 
   const calculatePrice = () => {
@@ -74,8 +102,10 @@ const AddToCartModal = ({ children, item, show, setShow,value , props }) => {
                 <div> {item.name}</div>
                 <div>{item.basePrice}</div>
               </div>
-              <div className="tgGreen text-sm"><i>{item.ingrediants.join(", ")}</i></div>
-              
+              <div className="tgGreen text-sm">
+                <i>{item.ingrediants && item.ingrediants.join(", ")}</i>
+              </div>
+
               {item.options && (
                 <>
                   {item.options.sizes && (
@@ -94,21 +124,58 @@ const AddToCartModal = ({ children, item, show, setShow,value , props }) => {
                       children
                     />
                   )}
-                  {item.options.blends && <HandleBlends item={item} children />}
-                  {item.options.iced && <HandleIced item={item} children />}
-                  {item.options.flavors && (
-                    <HandleFlavors
+                  {item.options.blends && (
+                    <HandleBlends
                       item={item}
-                      selectedFlavor={selectedFlavor}
-                      setSelectedFlavor={setSelectedFlavor}
+                      selectedBlend={selectedBlend}
+                      setSelectedBlend={setSelectedBlend}
                       children
                     />
                   )}
-                  {item.options.breads && <HandleBreads item={item} children />}
-                  {item.options.cheeses && (
-                    <HandleCheeses item={item} children />
+                  {item.options.iced && <HandleIced item={item} children />}
+                  {item.options.flavors && (
+                    <>
+                      <label className="text-xl font-bold text-red-900">
+                        Select a Flavor
+                      </label>
+                      <CheckBoxGroup
+                        item={item}
+                        onChange={setSelectedFlavor}
+                        selectedFlavor={selectedFlavor}
+                        remove={"true"}
+                        options={item.options.flavors.selections.map(
+                          selection => ({
+                            value: selection.id,
+                            label: `${selection.name + " $" + selection.price}`,
+                          })
+                        )}
+                      />
+                    </>
                   )}
-                  {item.options.meats && <HandleMeats item={item} children />}
+                  {item.options.breads && (
+                    <HandleBreads
+                      item={item}
+                      selectedBread={selectedBread}
+                      setSelectedBread={setSelectedBread}
+                      children
+                    />
+                  )}
+                  {item.options.cheese && (
+                    <HandleCheeses
+                      selectedCheese={selectedCheese}
+                      setSelectedCheese={setSelectedCheese}
+                      item={item}
+                      children
+                    />
+                  )}
+                  {item.options.meats && (
+                    <HandleMeats
+                      item={item}
+                      selectedMeat={selectedMeat}
+                      setSelectedMeat={setSelectedMeat}
+                      children
+                    />
+                  )}
                   {item.options.proteins && (
                     // <HandleProteins
                     //   item={item}
@@ -116,17 +183,29 @@ const AddToCartModal = ({ children, item, show, setShow,value , props }) => {
                     //   setSelectedProtein={setSelectedProtein}
                     //   children
                     // />
-                    <CheckBoxGroup 
-                    onChange={setSelectedProtein}
-                    selectedProtein={selectedProtein}
-                    remove={"true"}
-                    options={[
-                      { value: 1, label: `${item.options.proteins.selections.name}` },
-                      { value: 2, label: "Option 2" }
-                    ]}/>
+                    <>
+                    <label className="text-xl font-bold text-red-900">
+                        Select a Protein
+                      </label>
+                    <CheckBoxGroup
+                      onChange={setSelectedProtein}
+                      selectedProtein={selectedProtein}
+                      remove={"true"}
+                      options={item.options.proteins.selections.map(
+                        selection => ({
+                          value: selection.id,
+                          label: `${selection.name + " $" + selection.price}`,
+                        })
+                      )}
+                    /></>
                   )}
                   {item.options.patties && (
-                    <HandlePatties item={item} children />
+                    <HandlePatties
+                      item={item}
+                      selectedPatty={selectedPatty}
+                      setSelectedPatty={setSelectedPatty}
+                      children
+                    />
                   )}
                 </>
               )}

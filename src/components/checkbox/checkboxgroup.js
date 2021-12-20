@@ -17,9 +17,7 @@ const CheckBoxGroup = React.forwardRef(
     },
     ref
   ) => {
-    const error = errorText ? (
-      <p className="mt-2 text-sm text-red-600">{errorText}</p>
-    ) : null;
+    
     //Mimicing the force update in the fucntional component
     const [, updateState] = useState();
     const forceUpdate = useCallback(() => updateState({}), []);
@@ -44,11 +42,11 @@ const CheckBoxGroup = React.forwardRef(
     };
     console.log(selectedValues)
     return (
-      <div className="flex flex-col">
-        <div className="flex flex-col ">
+      <div className="flex w-full">
+        <div className="w-full">
           {options.map((option, index) => {
             return (
-              <div className="flex items-center justify-between" key={index}>
+              <div className="text-sm font-extralight" key={index}>
                 <CheckBox
                   id={option.label}
                   labelText={option.label}
@@ -84,7 +82,7 @@ const CheckBoxGroup = React.forwardRef(
             );
           })}
         </div>
-        {error}
+        
       </div>
     );
   }
