@@ -16,12 +16,18 @@ import HandleProteins from "./handlers/handleProteins"
 import CheckBoxGroup from "../checkbox/checkboxgroup"
 import HandlePatties from "./handlers/handlePatties"
 
+import { useCartContext } from '../store/CartContext';
+
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
 }
 
 const AddToCartModal = ({ children, item, show, setShow, value, props }) => {
   const [price, setPrice] = useState(item.basePrice)
+
+  const { addItem } = useCartContext();
+
   const [selectedSize, setSelectedSize] = useState(
     item.options &&
       item.options.sizes &&
@@ -80,6 +86,7 @@ const AddToCartModal = ({ children, item, show, setShow, value, props }) => {
 
   const calculatePrice = () => {
     setPrice(item.basePrice + selectedSize.price)
+    addItem(item)
   }
 
   console.log("size: ", selectedSize)
@@ -213,7 +220,7 @@ const AddToCartModal = ({ children, item, show, setShow, value, props }) => {
                 className="-ml-6 -mr-6 w-80 h-12 bg-blue-400"
                 onClick={calculatePrice}
               >
-                Add {item.price} to cart
+                Add {item.name} to cart
               </button>
             </div>
 
