@@ -2,31 +2,30 @@ import React from "react"
 import { useState } from "react"
 import { createPortal } from "react-dom"
 import "./addToCartModal.css"
-import { RadioGroup } from "@headlessui/react"
-import { CheckCircleIcon } from "@heroicons/react/solid"
+// import { RadioGroup } from "@headlessui/react"
+// import { CheckCircleIcon } from "@heroicons/react/solid"
 import HandleSizes from "./handlers/handleSize"
 import HandleMilks from "./handlers/handleMilks"
 import HandleBlends from "./handlers/handleBlends"
-import HandleFlavors from "./handlers/handleFlavors"
+// import HandleFlavors from "./handlers/handleFlavors"
 import HandleIced from "./handlers/handleIced"
 import HandleBreads from "./handlers/handleBreads"
 import HandleCheeses from "./handlers/handleCheeses"
 import HandleMeats from "./handlers/handleMeats"
-import HandleProteins from "./handlers/handleProteins"
+// import HandleProteins from "./handlers/handleProteins"
 import CheckBoxGroup from "../checkbox/checkboxgroup"
 import HandlePatties from "./handlers/handlePatties"
 
-import { useCartContext } from '../store/CartContext';
+import { useCartContext } from "../store/CartContext"
 
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ")
-}
+// function classNames(...classes) {
+//   return classes.filter(Boolean).join(" ")
+// }
 
 const AddToCartModal = ({ children, item, show, setShow, value, props }) => {
   const [price, setPrice] = useState(item.basePrice)
 
-  const { addItem } = useCartContext();
+  const { addItem } = useCartContext()
 
   const [selectedSize, setSelectedSize] = useState(
     item.options &&
@@ -82,7 +81,7 @@ const AddToCartModal = ({ children, item, show, setShow, value, props }) => {
       item.options.patties.selections &&
       item.options.patties.selections[0]
   )
-  console.log()
+  console.log(price)
 
   const calculatePrice = () => {
     setPrice(item.basePrice + selectedSize.price)
@@ -98,18 +97,18 @@ const AddToCartModal = ({ children, item, show, setShow, value, props }) => {
   const content = show && (
     <div className="backdrop">
       <div className="flex h-full">
-        <div className="flex w-full justify-center items-center">
-          <div className=" w-80 h-auto modal pl-6">
+        <div className="flex items-center justify-center w-full">
+          <div className="h-auto pl-6 w-80 modal">
             <button className="pl-28" onClick={() => setShow(false)}>
               Close
             </button>
             <TerraGiaLogo />
             <div>
-              <div className="flex justify-between w-64 font-extralight text-xl">
+              <div className="flex justify-between w-64 text-xl font-extralight">
                 <div> {item.name}</div>
                 <div>{item.basePrice}</div>
               </div>
-              <div className="tgGreen text-sm">
+              <div className="text-sm tgGreen">
                 <i>{item.ingrediants && item.ingrediants.join(", ")}</i>
               </div>
 
@@ -142,7 +141,10 @@ const AddToCartModal = ({ children, item, show, setShow, value, props }) => {
                   {item.options.iced && <HandleIced item={item} children />}
                   {item.options.flavors && (
                     <>
-                      <label className="text-xl font-bold text-red-900">
+                      <label
+                        htmlFor="flavor"
+                        className="text-xl font-bold text-red-900"
+                      >
                         Select a Flavor
                       </label>
                       <CheckBoxGroup
@@ -156,6 +158,7 @@ const AddToCartModal = ({ children, item, show, setShow, value, props }) => {
                             label: `${selection.name + " $" + selection.price}`,
                           })
                         )}
+                        id="flavor"
                       />
                     </>
                   )}
@@ -191,20 +194,25 @@ const AddToCartModal = ({ children, item, show, setShow, value, props }) => {
                     //   children
                     // />
                     <>
-                    <label className="text-xl font-bold text-red-900">
+                      <label
+                        htmlFor="protein"
+                        className="text-xl font-bold text-red-900"
+                      >
                         Select a Protein
                       </label>
-                    <CheckBoxGroup
-                      onChange={setSelectedProtein}
-                      selectedProtein={selectedProtein}
-                      remove={"true"}
-                      options={item.options.proteins.selections.map(
-                        selection => ({
-                          value: selection.id,
-                          label: `${selection.name + " $" + selection.price}`,
-                        })
-                      )}
-                    /></>
+                      <CheckBoxGroup
+                        onChange={setSelectedProtein}
+                        selectedProtein={selectedProtein}
+                        remove={"true"}
+                        options={item.options.proteins.selections.map(
+                          selection => ({
+                            value: selection.id,
+                            label: `${selection.name + " $" + selection.price}`,
+                          })
+                        )}
+                        id="protein"
+                      />
+                    </>
                   )}
                   {item.options.patties && (
                     <HandlePatties
@@ -217,7 +225,7 @@ const AddToCartModal = ({ children, item, show, setShow, value, props }) => {
                 </>
               )}
               <button
-                className="-ml-6 -mr-6 w-80 h-12 bg-blue-400"
+                className="h-12 -ml-6 -mr-6 bg-blue-400 w-80"
                 onClick={calculatePrice}
               >
                 Add {item.name} to cart

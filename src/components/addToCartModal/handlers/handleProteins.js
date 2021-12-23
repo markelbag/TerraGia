@@ -1,12 +1,16 @@
 import React from "react"
-import { useState } from "react"
+//import { useState } from "react"
 import { RadioGroup } from "@headlessui/react"
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
 }
 
-export const HandleProteins = ({ item, selectedProtein, setSelectedProtein }) => {
+export const HandleProteins = ({
+  item,
+  selectedProtein,
+  setSelectedProtein,
+}) => {
   // const [selectedProtein, setSelectedProtein] = useState(
   //   item.options.proteins.selections && item.options.proteins.selections[0]
   // )
@@ -21,7 +25,7 @@ export const HandleProteins = ({ item, selectedProtein, setSelectedProtein }) =>
             Select a Protein
           </RadioGroup.Label>
 
-          <div className="flex flex-wrap justify-between w-64 font-extralight text-xl">
+          <div className="flex flex-wrap justify-between w-64 text-xl font-extralight">
             {item.options.proteins.selections.map((protein, proteinIdx) => (
               <RadioGroup.Option
                 key={protein.id}
@@ -37,7 +41,7 @@ export const HandleProteins = ({ item, selectedProtein, setSelectedProtein }) =>
                 {({ checked, active }) => (
                   <>
                     <div key={proteinIdx} className="relative flex items-start">
-                      <div className="w-64 min-w-0 flex-1 text-sm">
+                      <div className="flex-1 w-64 min-w-0 text-sm">
                         <label
                           htmlFor={`side-${protein.id}`}
                           className="font-medium text-gray-700 select-none"
@@ -51,7 +55,7 @@ export const HandleProteins = ({ item, selectedProtein, setSelectedProtein }) =>
                           name="plan"
                           type="checkbox"
                           defaultChecked={protein.id === null}
-                          className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
+                          className="w-4 h-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"
                         />
                       </div>
                     </div>

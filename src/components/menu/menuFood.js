@@ -18,16 +18,22 @@ const MenuFood = props => {
       {FoodMenu.map(foodCategory => (
         <div key={foodCategory.category}>
           <div>
-            <h1 className="text-4xl font-extralight pt-6">
+            <h1 className="pt-6 text-4xl font-extralight">
               {foodCategory.category}
             </h1>
             {foodCategory.foods.map(food => (
-              <div key={food.id}>
-                <h2 onClick={() => handleClick(food)} className="flex w-72 justify-between font-extralight text-xl">
+              <div
+                role="button"
+                tabindex={0}
+                onClick={() => handleClick(food)}
+                onKeyDown={() => handleClick(food)}
+                key={food.id}
+              >
+                <h2 className="flex justify-between text-xl w-72 font-extralight">
                   <div>{food.name}</div>
                   <div>{food.basePrice}</div>
                 </h2>
-                <p className="flex tgGreen text-sm w-64 text-left">
+                <p className="flex w-64 text-sm text-left tgGreen">
                   {food.ingrediants && <i>{food.ingrediants.join(", ")}</i>}
                 </p>
               </div>

@@ -1,5 +1,6 @@
 import * as React from "react"
 import Layout from "../components/layout"
+import { Link } from "gatsby"
 import Seo from "../components/seo"
 import "../components/menu/menu.css"
 
@@ -59,34 +60,34 @@ const Classes = () => {
   return (
     <Layout>
       <Seo title="Classes" />
-      <div className="w-full ht overflow-scroll">
+      <div className="w-full overflow-scroll ht">
         <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-          <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-            <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+          <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+            <div className="overflow-hidden border-b border-gray-200 shadow sm:rounded-lg">
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
                   <tr>
                     <th
                       scope="col"
-                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                     >
                       Instructor
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                     >
                       Class
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                     >
                       Date
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                     >
                       Fee
                     </th>
@@ -103,25 +104,25 @@ const Classes = () => {
                         personIdx % 2 === 0 ? "bg-white" : "bg-gray-50"
                       }
                     >
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                      <td className="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap">
                         {person.instructor}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      <td className="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
                         {person.class}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      <td className="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
                         {person.date}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      <td className="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
                         {person.fee}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                        <a
-                          href="#"
+                      <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
+                        <Link
+                          to="/register"
                           className="text-green-700 hover:text-indigo-900"
                         >
                           Register
-                        </a>
+                        </Link>
                       </td>
                     </tr>
                   ))}

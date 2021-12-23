@@ -25,17 +25,17 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div className="h-screen bg-[#EAE5DF]">
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div className="bg-[#EAE5DF] m-4">
-        <main className="w-full h-full">{children}</main>
+      <div>
+        <main className="w-auto h-auto">{children}</main>
       </div>
       <footer className="m-8">
         © {new Date().getFullYear()}, Built with
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>
       </footer>
-    </>
+    </div>
   )
 }
 

@@ -31,8 +31,9 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 250, height: 250) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 700) {
+          # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
@@ -40,8 +41,9 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 250, height: 250) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 700) {
+          # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
@@ -49,8 +51,9 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 250, height: 250) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 700) {
+          # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
@@ -58,8 +61,9 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 250, height: 250) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 700) {
+          # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
@@ -67,8 +71,9 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 250, height: 250) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 700) {
+          # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
@@ -76,8 +81,9 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 250, height: 250) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 700) {
+          # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
@@ -85,8 +91,9 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 250, height: 250) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 700) {
+          # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
@@ -94,8 +101,9 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 250, height: 250) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 700, quality: 100) {
+          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluidLimitPresentationSize
         }
       }
     }
@@ -108,43 +116,46 @@ const IndexPage = props => {
   return (
     <CartProvider>
       <Layout>
-        <Seo title="Home" />
-        <Swiper
-          // install Swiper modules
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={20}
-          slidesPerView={6}
-          navigation
-          pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
-          onSwiper={swiper => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
-        >
-          <SwiperSlide>
-            <Img fixed={data.setTable.childImageSharp.fixed} alt="0" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Img fixed={data.Tartine.childImageSharp.fixed} alt="1" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Img fixed={data.burntOnion.childImageSharp.fixed} alt="2" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Img fixed={data.kimchi.childImageSharp.fixed} alt="3" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Img fixed={data.TGWellnessTea.childImageSharp.fixed} alt="3" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Img fixed={data.plantStock.childImageSharp.fixed} alt="3" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Img fixed={data.display.childImageSharp.fixed} alt="3" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Img fixed={data.juices.childImageSharp.fixed} alt="3" />
-          </SwiperSlide>
-        </Swiper>
+        <div className="h-auto m-8">
+          <Seo title="Home" />
+          <Swiper
+            // install Swiper modules
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            spaceBetween={10}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            scrollbar={{ draggable: false }}
+            onSwiper={swiper => console.log(swiper)}
+            onSlideChange={() => console.log("slide change")}
+            className="w-auto h-[720px]"
+          >
+            <SwiperSlide>
+              <Img fluid={data.setTable.childImageSharp.fluid} alt="0" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Img fluid={data.Tartine.childImageSharp.fluid} alt="1" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Img fluid={data.burntOnion.childImageSharp.fluid} alt="2" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Img fluid={data.kimchi.childImageSharp.fluid} alt="3" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Img fluid={data.TGWellnessTea.childImageSharp.fluid} alt="4" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Img fluid={data.plantStock.childImageSharp.fluid} alt="5" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Img fluid={data.display.childImageSharp.fluid} alt="6" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Img fluid={data.juices.childImageSharp.fluid} alt="7" />
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </Layout>
     </CartProvider>
   )
