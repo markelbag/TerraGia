@@ -27,26 +27,14 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          backgroundColor: `#EAE5DF`,
-          margin: `0 auto`,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main className="flex items-center justify-center w-full h-full bg-gray-300">
-          {children}
-        </main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+      <div className="bg-[#EAE5DF] m-4">
+        <main className="w-full h-full">{children}</main>
       </div>
+      <footer className="m-8">
+        © {new Date().getFullYear()}, Built with
+        {` `}
+        <a href="https://www.gatsbyjs.com">Gatsby</a>
+      </footer>
     </>
   )
 }

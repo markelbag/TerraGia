@@ -1,15 +1,5 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
-  darkMode: false, // or 'media' or 'class'
-  theme: {
-    extend: {},
-  },
-  variants: {
-    extend: {},
-  },
-  plugins: [
-    'gatsby-plugin-postcss',
-    require('@tailwindcss/aspect-ratio'),
-    require('@tailwindcss/forms'),
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: { extend: { aspectRatio: { "4/3": "4 / 3" } } },
+  plugins: [],
 }

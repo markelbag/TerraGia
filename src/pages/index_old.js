@@ -30,6 +30,9 @@ const IndexPage = props => {
           <Slider {...settings}>
             <div className="w-24 h-24 bg-gray-100"></div>
             <div>
+              <img src={setTable} alt=" 0" />
+            </div>
+            <div>
               <img src={Tartine} alt=" 1" />
             </div>
             <div>
