@@ -34,7 +34,9 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        <main className="size"> {children}</main>
+        <main className="flex items-center justify-center w-full h-full bg-gray-300">
+          {children}
+        </main>
         <footer
           style={{
             marginTop: `2rem`,

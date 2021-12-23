@@ -2,11 +2,16 @@ import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper"
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react"
 
 // Import Swiper styles
 import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+import "swiper/css/scrollbar"
 
 import { CartProvider } from "../components/store/CartContext"
 import setTable from "../images/setTable.png"
@@ -42,42 +47,45 @@ const IndexPage = props => {
     <CartProvider>
       <Layout>
         <Seo title="Home" />
-        <div className="flex items-center justify-center w-full h-full bg-gray-300">
-          <Swiper
-            spaceBetween={50}
-            slidesPerView={1}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={swiper => console.log(swiper)}
-          >
-            <SwiperSlide>
-              <img src={setTable} alt=" 0" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={Tartine} alt=" 1" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={Tartine} alt=" 1" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={burntOnion} alt=" 2" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={juices} alt=" 3" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={kimchi} alt=" 4" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={TGWellnessTea} alt=" 5" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={plantStock} alt=" 6" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={display} alt=" 7" />
-            </SwiperSlide>
-          </Swiper>
-        </div>
+        <Swiper
+          // install Swiper modules
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          onSwiper={swiper => console.log(swiper)}
+          onSlideChange={() => console.log("slide change")}
+        >
+          <SwiperSlide>
+            <img src={setTable} alt=" 0" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={Tartine} alt=" 1" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={Tartine} alt=" 1" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={burntOnion} alt=" 2" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={juices} alt=" 3" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={kimchi} alt=" 4" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={TGWellnessTea} alt=" 5" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={plantStock} alt=" 6" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={display} alt=" 7" />
+          </SwiperSlide>
+        </Swiper>
       </Layout>
     </CartProvider>
   )
