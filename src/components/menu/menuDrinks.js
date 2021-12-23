@@ -18,7 +18,7 @@ const MenuDrinks = props => {
       {DrinksMenu.map(drinkCategory => (
         <div key={drinkCategory.category}>
           <div>
-            <h1 className="pt-6 text-4xl font-extralight">
+            <h1 className="pt-6 pb-4 text-4xl font-extralight">
               {drinkCategory.category}
             </h1>
             {drinkCategory.drinks.map(drink => (
@@ -29,11 +29,11 @@ const MenuDrinks = props => {
                 onKeyDown={() => handleClick(drink)}
                 key={drink.id}
               >
-                <h2 className="flex justify-between text-xl w-72 font-extralight">
+                <h2 className="flex justify-between pb-1 text-xl w-72 font-extralight">
                   <div>{drink.name}</div>
                   <div>{drink.basePrice}</div>
                 </h2>
-                <p className="flex w-64 text-sm text-left tgGreen">
+                <p className="flex w-64 pb-4 text-sm text-left tgGreen">
                   {drink.ingrediants && <i>{drink.ingrediants.join(", ")}</i>}
                 </p>
               </div>

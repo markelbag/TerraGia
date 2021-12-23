@@ -1,5 +1,9 @@
 const path = require(`path`)
 
+// const esm = require("esm")(module)
+
+// module.exports = esm("./gastby-config.esm.js")
+
 module.exports = {
   siteMetadata: {
     title: `Terragia`,
