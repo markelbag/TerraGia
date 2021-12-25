@@ -34,7 +34,7 @@ export default Contact
     theme: {
       extend: {
         colors: {
-          grape: colors.purple,
+          purple: colors.purple,
         },
       },
     },
@@ -161,7 +161,7 @@ export function Example() {
                 />
               </a>
               <div className="flex items-center -mr-2 lg:hidden">
-                <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 rounded-md bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-grape-500">
+                <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 rounded-md bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-purple-500">
                   <span className="sr-only">Open main menu</span>
                   <MenuIcon className="w-6 h-6" aria-hidden="true" />
                 </Popover.Button>
@@ -181,7 +181,7 @@ export function Example() {
             <div className="hidden lg:flex lg:items-center lg:space-x-6">
               <a
                 href="#"
-                className="px-6 py-2 text-base font-medium bg-white border border-transparent rounded-md shadow-md text-grape-600 hover:bg-gray-50"
+                className="px-6 py-2 text-base font-medium text-purple-600 bg-white border border-transparent rounded-md shadow-md hover:bg-gray-50"
               >
                 Contact
               </a>
@@ -212,7 +212,7 @@ export function Example() {
                   />
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-grape-500">
+                  <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500">
                     <span className="sr-only">Close menu</span>
                     <XIcon className="w-6 h-6" aria-hidden="true" />
                   </Popover.Button>
@@ -233,7 +233,7 @@ export function Example() {
                 <div className="px-5 mt-6">
                   <a
                     href="#"
-                    className="block w-full px-4 py-2 font-medium text-center text-white border border-transparent rounded-md shadow bg-grape-500 hover:bg-grape-600"
+                    className="block w-full px-4 py-2 font-medium text-center text-white bg-purple-500 border border-transparent rounded-md shadow hover:bg-purple-600"
                   >
                     Contact
                   </a>
@@ -299,7 +299,7 @@ export function Example() {
                         name="first-name"
                         id="first-name"
                         autoComplete="given-name"
-                        className="block w-full border-gray-300 rounded-md shadow-sm sm:text-sm focus:ring-grape-500 focus:border-grape-500"
+                        className="block w-full border-gray-300 rounded-md shadow-sm sm:text-sm focus:ring-purple-500 focus:border-purple-500"
                       />
                     </div>
                   </div>
@@ -316,7 +316,7 @@ export function Example() {
                         name="last-name"
                         id="last-name"
                         autoComplete="family-name"
-                        className="block w-full border-gray-300 rounded-md shadow-sm sm:text-sm focus:ring-grape-500 focus:border-grape-500"
+                        className="block w-full border-gray-300 rounded-md shadow-sm sm:text-sm focus:ring-purple-500 focus:border-purple-500"
                       />
                     </div>
                   </div>
@@ -333,7 +333,7 @@ export function Example() {
                         name="email"
                         type="email"
                         autoComplete="email"
-                        className="block w-full border-gray-300 rounded-md shadow-sm sm:text-sm focus:ring-grape-500 focus:border-grape-500"
+                        className="block w-full border-gray-300 rounded-md shadow-sm sm:text-sm focus:ring-purple-500 focus:border-purple-500"
                       />
                     </div>
                   </div>
@@ -350,7 +350,7 @@ export function Example() {
                         name="company"
                         id="company"
                         autoComplete="organization"
-                        className="block w-full border-gray-300 rounded-md shadow-sm sm:text-sm focus:ring-grape-500 focus:border-grape-500"
+                        className="block w-full border-gray-300 rounded-md shadow-sm sm:text-sm focus:ring-purple-500 focus:border-purple-500"
                       />
                     </div>
                   </div>
@@ -376,7 +376,7 @@ export function Example() {
                         id="phone"
                         autoComplete="tel"
                         aria-describedby="phone-description"
-                        className="block w-full border-gray-300 rounded-md shadow-sm sm:text-sm focus:ring-grape-500 focus:border-grape-500"
+                        className="block w-full border-gray-300 rounded-md shadow-sm sm:text-sm focus:ring-purple-500 focus:border-purple-500"
                       />
                     </div>
                   </div>
@@ -401,7 +401,7 @@ export function Example() {
                         name="how-can-we-help"
                         aria-describedby="how-can-we-help-description"
                         rows={4}
-                        className="block w-full border border-gray-300 rounded-md shadow-sm sm:text-sm focus:ring-grape-500 focus:border-grape-500"
+                        className="block w-full border border-gray-300 rounded-md shadow-sm sm:text-sm focus:ring-purple-500 focus:border-purple-500"
                         defaultValue={""}
                       />
                     </div>
@@ -417,7 +417,7 @@ export function Example() {
                           name="budget"
                           defaultValue="under_25k"
                           type="radio"
-                          className="w-4 h-4 border-gray-300 focus:ring-grape-500 text-grape-600"
+                          className="w-4 h-4 text-purple-600 border-gray-300 focus:ring-purple-500"
                         />
                         <label htmlFor="budget-under-25k" className="ml-3">
                           <span className="block text-sm text-gray-700">
@@ -431,7 +431,7 @@ export function Example() {
                           name="budget"
                           defaultValue="25k-50k"
                           type="radio"
-                          className="w-4 h-4 border-gray-300 focus:ring-grape-500 text-grape-600"
+                          className="w-4 h-4 text-purple-600 border-gray-300 focus:ring-purple-500"
                         />
                         <label htmlFor="budget-25k-50k" className="ml-3">
                           <span className="block text-sm text-gray-700">
@@ -445,7 +445,7 @@ export function Example() {
                           name="budget"
                           defaultValue="50k-100k"
                           type="radio"
-                          className="w-4 h-4 border-gray-300 focus:ring-grape-500 text-grape-600"
+                          className="w-4 h-4 text-purple-600 border-gray-300 focus:ring-purple-500"
                         />
                         <label htmlFor="budget-50k-100k" className="ml-3">
                           <span className="block text-sm text-gray-700">
@@ -459,7 +459,7 @@ export function Example() {
                           name="budget"
                           defaultValue="over_100k"
                           type="radio"
-                          className="w-4 h-4 border-gray-300 focus:ring-grape-500 text-grape-600"
+                          className="w-4 h-4 text-purple-600 border-gray-300 focus:ring-purple-500"
                         />
                         <label htmlFor="budget-over-100k" className="ml-3">
                           <span className="block text-sm text-gray-700">
@@ -481,17 +481,44 @@ export function Example() {
                         type="text"
                         name="how-did-you-hear-about-us"
                         id="how-did-you-hear-about-us"
-                        className="block w-full border-gray-300 rounded-md shadow-sm focus:ring-grape-500 focus:border-grape-500 sm:text-sm"
+                        className="block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
                       />
                     </div>
                   </div>
                   <div className="text-right sm:col-span-2">
                     <button
                       type="submit"
-                      className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm bg-grape-600 hover:bg-grape-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-grape-500"
+                      className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-purple-600 border border-transparent rounded-md shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
                     >
                       Submit
                     </button>
+                    {/* <form
+                      action="mailto:contact@yourdomain.com"
+                      method="POST"
+                      enctype="multipart/form-data"
+                      name="EmailForm"
+                    >
+                      <label>
+                        Name:
+                        <input type="text" size="19" name="Contact-Name" />
+                      </label>
+                      <label>
+                        Email:
+                        <input type="email" name="Contact-Email" />
+                      </label>
+                      <label>
+                        Message:
+                        <textarea
+                          name="Contact-Message"
+                          rows="6"
+                          cols="20"
+                        ></textarea>
+                      </label>
+
+                      <button type="submit" value="Submit">
+                        Send
+                      </button>
+                    </form> */}
                   </div>
                 </form>
               </div>
@@ -500,17 +527,17 @@ export function Example() {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-grape-400">
+        <div className="bg-purple-400">
           <div className="max-w-md px-4 py-16 mx-auto text-center sm:max-w-2xl sm:py-24 sm:px-6 lg:px-8 lg:py-32">
             <h2 className="text-3xl font-extrabold sm:text-4xl">
               <span className="block text-white">
                 Looking for a new career?
               </span>
-              <span className="block text-grape-900">We’re hiring.</span>
+              <span className="block text-purple-900">We’re hiring.</span>
             </h2>
             <a
               href="#"
-              className="inline-flex items-center justify-center w-full px-5 py-3 mt-8 text-base font-medium bg-white border border-transparent rounded-md shadow-md text-grape-600 hover:bg-grape-50 sm:w-auto"
+              className="inline-flex items-center justify-center w-full px-5 py-3 mt-8 text-base font-medium text-purple-600 bg-white border border-transparent rounded-md shadow-md hover:bg-purple-50 sm:w-auto"
             >
               <span>See open positions</span>
               <ExternalLinkIcon
