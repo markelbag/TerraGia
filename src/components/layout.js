@@ -8,7 +8,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import Footer from "./footer"
 import Header from "./header"
 import "./layout.css"
 import "@fontsource/raleway"
@@ -28,13 +28,10 @@ const Layout = ({ children }) => {
     <div className="h-screen bg-[#EAE5DF]">
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div>
-        <main className="w-auto h-auto">{children}</main>
+        <main className="w-auto h-auto bg-[#EAE5DF]">{children}</main>
       </div>
-      <footer className="m-8">
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </footer>
+    
+      <Footer />
     </div>
   )
 }

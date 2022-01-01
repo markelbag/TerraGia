@@ -1999,7 +1999,7 @@ const Menu = props => (
       }}
     ></div>
     <div className="relative ">
-      <div className="absolute z-10 w-full overflow-scroll ht ">
+      <div className=" z-10 w-full overflow-scroll ht ">
         <div className="flex w-full justify-evenly">
           <MenuDrinks />
           <MenuFood />

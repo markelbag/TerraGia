@@ -30,7 +30,7 @@ const Contact = () => {
                 <dt className="sr-only">Phone number</dt>
                 <dd className="flex">
                   <PhoneIcon className="flex-shrink-0 h-6 w-6 text-gray-400" aria-hidden="true" />
-                  <span className="ml-3">+1 (603) 310-9559</span>
+                  <span className="ml-3">(603) 310-9559</span>
                 </dd>
               </div>
               <div className="mt-3">
