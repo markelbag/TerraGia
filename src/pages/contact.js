@@ -61,7 +61,7 @@ export function Example() {
     <div>
       <main>
         {/* Header */}
-        <div className="py-24 gray-50 sm:py-32">
+        <div className="py-8 gray-50 sm:py-4">
           <div className="max-w-md pl-4 pr-8 mx-auto sm:max-w-lg sm:px-6 lg:max-w-7xl lg:px-8">
             <h1 className="text-4xl font-extrabold leading-10 tracking-tight text-center text-gray-900 sm:text-5xl sm:leading-none lg:text-6xl">
               Get in touch

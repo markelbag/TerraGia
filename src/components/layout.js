@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
     <div className="h-screen bg-[#EAE5DF]">
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div>
-        <main className="w-auto h-auto bg-[#EAE5DF]">{children}</main>
+        <div className="w-auto h-auto bg-[#EAE5DF]">{children}</div>
       </div>
     
       <Footer />
