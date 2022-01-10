@@ -4,70 +4,8 @@ import { Link } from "gatsby"
 import NavBar from "./nav/navBar"
 import { SearchIcon } from "@heroicons/react/solid"
 import CartIcon from "../components/cart/cartIcon"
-
-// const Header = ({ siteTitle }) => (
-//   <header
-//     style={{
-//       backgroundColor: `#EAE5DF`,
-//       borderBottom: `1px solid #E6C6D1`,
-//     }}
-//   >
-//     <div
-//       style={{
-//         margin: `0 auto`,
-//         paddingLeft: `10px`,
-//         paddingRight: `10px`,
-//       }}
-//     >
-//       <h1 className="flex w-full h-full items-center">
-//         <Link to="/">
-
-//         </Link>
-//         <NavBar />
-
-//         <div className="flex justify-end h-full w-full">
-
-//           <div className="flex w-16 items-center justify-between">
-//             <Link to="/">
-//               <svg
-//                 xmlns="http://www.w3.org/2000/svg"
-//                 className="h-6 w-6"
-//                 fill="none"
-//                 viewBox="0 0 24 24"
-//                 stroke="#A4B38B"
-//               >
-//                 <path
-//                   strokeLinecap="round"
-//                   strokeLinejoin="round"
-//                   strokeWidth={2}
-//                   d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-//                 />
-//               </svg>
-//             </Link>
-//             <CartIcon />
-//           </div>
-//         </div>
-//       </h1>
-//     </div>
-//   </header>
-// )
-
-// Header.propTypes = {
-//   siteTitle: PropTypes.string,
-// }
-
-// Header.defaultProps = {
-//   siteTitle: ``,
-// }
-
-/* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
+import { Disclosure } from '@headlessui/react'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
  const Header = () => {
   return (
@@ -76,7 +14,7 @@ function classNames(...classes) {
           }} className="bg-[#EAE5DF] shadow">
       {({ open }) => (
         <>
-          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto pt-4 pb-2 px-2 sm:px-6 lg:px-8">
             <div className="relative flex justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
                 {/* Mobile menu button */}
@@ -154,7 +92,7 @@ function classNames(...classes) {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:flex sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <div className="pr-8 hidden md:flex">
+              <div className="pr-8">
             <label htmlFor="search" className="sr-only">
               Search
             </label>
@@ -168,7 +106,7 @@ function classNames(...classes) {
               <input
                 id="search"
                 name="search"
-                className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-pink-100 focus:border-pink-100 sm:text-sm"
+                className="block w-full pl-10 pr-3 py-1 hidden lg:block border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400  sm:text-sm"
                 placeholder="Search"
                 type="search"
               />

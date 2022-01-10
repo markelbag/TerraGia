@@ -3,7 +3,7 @@ import NavItem from "./navItem"
 import { Link } from "gatsby"
 
 const NavBar = props => (
-  <div className="flex w-full h-full justify-evenly">
+  <div className="flex w-full h-full justify-evenly hover:text-[#940436]">
     <NavItem>
       <Link to="/menu">cafe</Link>
     </NavItem>

@@ -55,18 +55,18 @@ export default Contact
 
 
 
-export function Example() {
+const Example = () => {
   const data = useStaticQuery(query)
   return (
     <div>
       <main>
         {/* Header */}
-        <div className="py-8 gray-50 sm:py-4">
+        <div className="py-8 sm:py-4">
           <div className="max-w-md pl-4 pr-8 mx-auto sm:max-w-lg sm:px-6 lg:max-w-7xl lg:px-8">
-            <h1 className="text-4xl font-extrabold leading-10 tracking-tight text-center text-gray-900 sm:text-5xl sm:leading-none lg:text-6xl">
+            <h1 className="text-4xl font-extrabold leading-10 tracking-tight text-center sm:text-5xl sm:leading-none lg:text-6xl">
               Get in touch
             </h1>
-            <p className="max-w-3xl mx-auto mt-6 text-xl leading-normal text-center text-gray-500">
+            <p className="max-w-3xl mx-auto mt-6 text-xl leading-normal text-center">
               Send us a message or visit us in person at 100 main street, in Nashua, NH!
             </p>
           </div>
@@ -92,7 +92,7 @@ export function Example() {
                   <div>
                     <label
                       htmlFor="first-name"
-                      className="block text-sm font-medium text-gray-700"
+                      className="block text-sm font-medium "
                     >
                       First name
                     </label>
@@ -109,7 +109,7 @@ export function Example() {
                   <div>
                     <label
                       htmlFor="last-name"
-                      className="block text-sm font-medium text-gray-700"
+                      className="block text-sm font-medium"
                     >
                       Last name
                     </label>
@@ -126,7 +126,7 @@ export function Example() {
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium text-gray-700"
+                      className="block text-sm font-medium "
                     >
                       Email
                     </label>
@@ -145,13 +145,13 @@ export function Example() {
                     <div className="flex justify-between">
                       <label
                         htmlFor="phone"
-                        className="block text-sm font-medium text-gray-700"
+                        className="block text-sm font-medium "
                       >
                         Phone
                       </label>
                       <span
                         id="phone-description"
-                        className="text-sm text-gray-500"
+                        className="text-sm "
                       >
                         Optional
                       </span>
@@ -171,13 +171,13 @@ export function Example() {
                     <div className="flex justify-between">
                       <label
                         htmlFor="how-can-we-help"
-                        className="block text-sm font-medium text-gray-700"
+                        className="block text-sm font-medium "
                       >
                         How can we help you?
                       </label>
                       <span
                         id="how-can-we-help-description"
-                        className="text-sm text-gray-500"
+                        className="text-sm"
                       >
                         Max. 500 characters
                       </span>
@@ -197,7 +197,7 @@ export function Example() {
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="how-did-you-hear-about-us"
-                      className="block text-sm font-medium text-gray-700"
+                      className="block text-sm font-medium"
                     >
                       How did you hear about us?
                     </label>

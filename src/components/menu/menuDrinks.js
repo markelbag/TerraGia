@@ -24,16 +24,17 @@ const MenuDrinks = props => {
             {drinkCategory.drinks.map(drink => (
               <div
                 role="button"
+                className="hover:text-[#940436] hover:bg-black hover:bg-opacity-5"
                 tabindex={0}
                 onClick={() => handleClick(drink)}
                 onKeyDown={() => handleClick(drink)}
                 key={drink.id}
               >
-                <h2 className="flex justify-between pb-1 text-xl w-72 font-extralight">
+                <h2 className="flex justify-between pb-1 text-xl w-3/4 font-extralight ">
                   <div>{drink.name}</div>
                   <div>{drink.basePrice}</div>
                 </h2>
-                <p className="flex w-64 pb-4 text-sm text-left tgGreen">
+                <p className="flex w-2/3 pb-4 text-sm text-left tgGreen">
                   {drink.ingrediants && <i>{drink.ingrediants.join(", ")}</i>}
                 </p>
               </div>

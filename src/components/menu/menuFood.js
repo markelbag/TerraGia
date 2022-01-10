@@ -24,6 +24,7 @@ const MenuFood = props => {
             {foodCategory.foods.map(food => (
               <div
                 role="button"
+                className="hover:text-[#940436]"
                 tabindex={0}
                 onClick={() => handleClick(food)}
                 onKeyDown={() => handleClick(food)}
